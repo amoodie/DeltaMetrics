@@ -1,0 +1,33 @@
+deltametrics.mask.LandMask
+==========================
+
+.. currentmodule:: deltametrics.mask
+
+.. autoclass:: LandMask
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~LandMask.Seaangles_mod
+      ~LandMask.__init__
+      ~LandMask.compute_landmask
+      ~LandMask.compute_shoremask
+      ~LandMask.show
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~LandMask.data
+      ~LandMask.mask
+   
+   

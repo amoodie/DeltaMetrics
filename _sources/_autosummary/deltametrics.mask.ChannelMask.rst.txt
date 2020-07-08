@@ -1,0 +1,33 @@
+deltametrics.mask.ChannelMask
+=============================
+
+.. currentmodule:: deltametrics.mask
+
+.. autoclass:: ChannelMask
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ChannelMask.Seaangles_mod
+      ~ChannelMask.__init__
+      ~ChannelMask.compute_channelmask
+      ~ChannelMask.compute_shoremask
+      ~ChannelMask.show
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ChannelMask.data
+      ~ChannelMask.mask
+   
+   

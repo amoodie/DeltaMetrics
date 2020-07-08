@@ -1,0 +1,32 @@
+deltametrics.section.RadialSection
+==================================
+
+.. currentmodule:: deltametrics.section
+
+.. autoclass:: RadialSection
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~RadialSection.__init__
+      ~RadialSection.connect
+      ~RadialSection.show
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RadialSection.s
+      ~RadialSection.trace
+      ~RadialSection.variables
+   
+   

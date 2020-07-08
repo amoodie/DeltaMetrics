@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Installing &#8212; DeltaMetrics 0.1.0 documentation</title>
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Contributing" href="contributing.html" />
+    <link rel="prev" title="DeltaMetrics" href="../index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="contributing.html" title="Contributing"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="DeltaMetrics"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">DeltaMetrics 0.1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Installing</a><ul>
+<li><a class="reference internal" href="#latest-version-install">Latest version install</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../index.html"
+                        title="previous chapter">DeltaMetrics</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="contributing.html"
+                        title="next chapter">Contributing</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/meta/installing.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="installing">
+<h1>Installing<a class="headerlink" href="#installing" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is no pypi or conda candidate for this package yet.</p>
+</div>
+<p>You can install the development version of the software by following the instructions below.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>DeltaMetrics is currently in development, with a constantly changing API.
+We make no guarantee of stability, correctness, or functionality.</p>
+</div>
+<div class="section" id="latest-version-install">
+<h2>Latest version install<a class="headerlink" href="#latest-version-install" title="Permalink to this headline">¶</a></h2>
+<p>Follow these instructions to install the latest development version of DeltaMetrics.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Developers should follow the developer instructions in the <a class="reference internal" href="../guides/devguide.html"><span class="doc">Developer Guide</span></a>.</p>
+</div>
+<p>Install by cloning:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git clone https://github.com/DeltaRCM/DeltaMetrics.git
+</pre></div>
+</div>
+<p>and then <code class="docutils literal notranslate"><span class="pre">cd</span></code> into the directory and install editable copy.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> DeltaMetrics
+<span class="gp">$</span> pip install -e .
+</pre></div>
+</div>
+<p>Check that your installation worked by running the tests.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install pytest
+<span class="gp">$</span> pytest
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="contributing.html" title="Contributing"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="DeltaMetrics"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">DeltaMetrics 0.1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, The DeltaRCM Team.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.0.1.
+    </div>
+  </body>
+</html>
