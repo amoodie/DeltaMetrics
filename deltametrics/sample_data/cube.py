@@ -52,3 +52,10 @@ def rcm8():
                         'pyDeltaRCM_Output_8.nc')
     _cube = cube.DataCube(path)
     return _cube
+
+
+def landsat():
+    path = os.path.join(os.path.dirname(__file__), 'files',
+                        'LandsatEx.hdf5')
+    _cube = cube.DataCube(path)
+    return _cube
