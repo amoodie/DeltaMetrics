@@ -230,7 +230,8 @@ class VariableSet(object):
 
         _added_list = ['net_to_gross']
         self.known_list = ['eta', 'stage', 'depth', 'discharge',
-                           'velocity', 'sedflux', 'strata_sand_frac'] + \
+                           'velocity', 'sedflux', 'strata_sand_frac',
+                           'sandfrac'] + \
                           ['x', 'y', 'time'] + _added_list
 
         self._variables = []
@@ -407,6 +408,27 @@ class VariableSet(object):
                                           label='sediment flux')
         elif type(var) is VariableInfo:
             self._sedflux = var
+        else:
+            raise TypeError
+
+    @property
+    def sandfrac(self):
+        """Sand fraction style.
+        """
+        return self._sandfrac
+
+    @sandfrac.setter
+    def sandfrac(self, var):
+        if not var:
+            sandfrac = colors.ListedColormap(
+                ['saddlebrown', 'sienna', 'goldenrod', 'gold'])
+            sandfrac.set_under('saddlebrown')
+            # bn = colors.BoundaryNorm([1e-6, 1], sandfrac.N)
+            self._sandfrac = VariableInfo('sandfrac',
+                                          cmap=sandfrac,
+                                          label='sand fraction')
+        elif type(var) is VariableInfo:
+            self._strata_sand_frac = var
         else:
             raise TypeError
 
