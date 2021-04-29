@@ -3,11 +3,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>deltametrics.strat.MeshStratigraphyAttributes &#8212; DeltaMetrics 0.1.0 documentation</title>
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
@@ -69,7 +71,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="deltametrics-strat-meshstratigraphyattributes">
+  <section id="deltametrics-strat-meshstratigraphyattributes">
 <h1>deltametrics.strat.MeshStratigraphyAttributes<a class="headerlink" href="#deltametrics-strat-meshstratigraphyattributes" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="deltametrics.strat.MeshStratigraphyAttributes">
@@ -81,7 +83,7 @@ this with Boxy stratigraphy.</p>
 <p class="rubric">Notes</p>
 <p>Some descriptions regarding implementation.</p>
 <dl>
-<dt>_psvd_idx<span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray</span></code> of <cite>np.bool</cite></span></dt><dd><p>Preserved index into the section array.</p>
+<dt>_psvd_idx<span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray</span></code> of <cite>bool</cite></span></dt><dd><p>Preserved index into the section array.</p>
 </dd>
 <dt>_psvd_flld<span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray</span></code></span></dt><dd><p>Elevation of preserved voxels, filled to vertical extent with the
 final elevation of the bed (i.e., to make it displayable by
@@ -99,11 +101,11 @@ because the column cannot change with preservation.</p>
 <dl class="method">
 <dt id="deltametrics.strat.MeshStratigraphyAttributes.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>elev</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.strat.MeshStratigraphyAttributes.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>We can precompute several attributes of the stratigraphy, including which
-voxels are preserved, what their row indicies in the sparse stratigraphy
-matrix are, and what the elevation of each elevation entry in the final
-stratigraphy are. <em>This allows placing of any t-x-y stored variable into
-the section.</em></p>
+<dd><p>We can precompute several attributes of the stratigraphy, including
+which voxels are preserved, what their row indicies in the sparse
+stratigraphy matrix are, and what the elevation of each elevation
+entry in the final stratigraphy are. <em>This allows placing of any t-x-y
+stored variable into the section.</em></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>elev</strong> – elevation t-x-y array to compute from</p>
@@ -203,7 +205,7 @@ derived from the call.</p>
 
 </dd></dl>
 
-</div>
+</section>
 
 
           </div>
