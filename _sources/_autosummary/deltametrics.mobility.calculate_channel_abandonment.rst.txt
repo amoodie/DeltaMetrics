@@ -1,0 +1,6 @@
+﻿deltametrics.mobility.calculate\_channel\_abandonment
+=====================================================
+
+.. currentmodule:: deltametrics.mobility
+
+.. autofunction:: calculate_channel_abandonment

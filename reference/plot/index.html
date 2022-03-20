@@ -1,0 +1,538 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Plotting utilities and functions &#8212; DeltaMetrics 0.3.2 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="deltametrics.plot.VariableInfo" href="../../_autosummary/deltametrics.plot.VariableInfo.html" />
+    <link rel="prev" title="deltametrics.io.NetCDFIO" href="../../_autosummary/deltametrics.io.NetCDFIO.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../_autosummary/deltametrics.plot.VariableInfo.html" title="deltametrics.plot.VariableInfo"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../../_autosummary/deltametrics.io.NetCDFIO.html" title="deltametrics.io.NetCDFIO"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">DeltaMetrics 0.3.2 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">API reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Plotting utilities and functions</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="plotting-utilities-and-functions">
+<h1>Plotting utilities and functions<a class="headerlink" href="#plotting-utilities-and-functions" title="Permalink to this headline">¶</a></h1>
+<p>The package uses a few utility classes and functions to make consistent plotting easy thoughout the package.
+This reference page documents the lower-level utilities used to make this happen.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The built-in routines to plot <code class="docutils literal notranslate"><span class="pre">Section</span></code> and <code class="docutils literal notranslate"><span class="pre">Plan</span></code> objects are not documented here, look for documentation on those high-level methods in their respective module documentation.</p>
+</div>
+<p>The functions are defined in <code class="docutils literal notranslate"><span class="pre">deltametrics.plot</span></code>.</p>
+<section id="default-styling">
+<span id="id1"></span><h2>Default styling<a class="headerlink" href="#default-styling" title="Permalink to this headline">¶</a></h2>
+<p>By default, each variable receives a set of styling definitions.
+The default parameters of each styling variable are defined below:</p>
+<p>(<a class="reference external" href="../../pyplots/plot/document_variableset.png">png</a>, <a class="reference external" href="../../pyplots/plot/document_variableset.hires.png">hires.png</a>)</p>
+<figure class="align-default">
+<img alt="../../_images/document_variableset.png" class="plot-directive" src="../../_images/document_variableset.png" />
+</figure>
+</section>
+<section id="plotting-utility-objects">
+<h2>Plotting utility objects<a class="headerlink" href="#plotting-utility-objects" title="Permalink to this headline">¶</a></h2>
+<p>These objects are mostly used internally to help make plots appear consistent across the library.
+You may want to examine these to change the style of plotting across the package.</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plot.VariableInfo.html#deltametrics.plot.VariableInfo" title="deltametrics.plot.VariableInfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VariableInfo</span></code></a>(name, **kwargs)</p></td>
+<td><p>Variable styling and information.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plot.VariableSet.html#deltametrics.plot.VariableSet" title="deltametrics.plot.VariableSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VariableSet</span></code></a>([override_dict])</p></td>
+<td><p>A default set of properties for variables.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="plotting-convenience-functions">
+<h2>Plotting convenience functions<a class="headerlink" href="#plotting-convenience-functions" title="Permalink to this headline">¶</a></h2>
+<p>These functions may be helpful in making figures and exploring during analyses.
+Mostly, these functions provide a component of a plot.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="deltametrics.plot.aerial_view">
+<span class="sig-prename descclassname"><span class="pre">deltametrics.plot.</span></span><span class="sig-name descname"><span class="pre">aerial_view</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elevation_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datum</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ticks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colorbar_kw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_im</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.plot.aerial_view" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show an aerial plot of an elevation dataset.</p>
+<p>See also: implementation wrapper for a cube.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>elevation_data</strong> – 2D array of elevations.</p></li>
+<li><p><strong>datum</strong> – Sea level reference, default value is 0.</p></li>
+<li><p><strong>ax</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code> object, optional) – A <cite>matplotlib</cite> <cite>Axes</cite> object to plot the section. Optional; if not
+provided, a call is made to <code class="docutils literal notranslate"><span class="pre">plt.gca()</span></code> to get the current (or
+create a new) <cite>Axes</cite> object.</p></li>
+<li><p><strong>ticks</strong> – Whether to show ticks. Default is false, no tick labels.</p></li>
+<li><p><strong>colorbar_kw</strong> – Dictionary of keyword args passed to <a class="reference internal" href="#deltametrics.plot.append_colorbar" title="deltametrics.plot.append_colorbar"><code class="xref py py-func docutils literal notranslate"><span class="pre">append_colorbar()</span></code></a>.</p></li>
+<li><p><strong>return_im</strong> (<em>bool</em><em>, </em><em>optional</em>) – Returns the <code class="docutils literal notranslate"><span class="pre">plt.imshow()</span></code> image object if True. Default is False.</p></li>
+<li><p><strong>**kwargs</strong> – Optionally, arguments accepted by <a class="reference internal" href="#deltametrics.plot.cartographic_colormap" title="deltametrics.plot.cartographic_colormap"><code class="xref py py-func docutils literal notranslate"><span class="pre">cartographic_colormap()</span></code></a>, or
+<cite>imshow</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>colorbar</em> – Colorbar instance appended to the axes.</p></li>
+<li><p><strong>im</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">AxesImage</span></code> object, optional) – Optional return of the image object itself if <code class="docutils literal notranslate"><span class="pre">return_im</span></code> is True</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">golfcube</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">sample_data</span><span class="o">.</span><span class="n">golf</span><span class="p">()</span>
+<span class="n">elevation_data</span> <span class="o">=</span> <span class="n">golfcube</span><span class="p">[</span><span class="s1">&#39;eta&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">aerial_view</span><span class="p">(</span><span class="n">elevation_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="../../reference/plot/index-1.png">png</a>, <a class="reference external" href="../../reference/plot/index-1.hires.png">hires.png</a>)</p>
+<figure class="align-default">
+<img alt="../../_images/index-12.png" class="plot-directive" src="../../_images/index-12.png" />
+</figure>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="deltametrics.plot.overlay_sparse_array">
+<span class="sig-prename descclassname"><span class="pre">deltametrics.plot.</span></span><span class="sig-name descname"><span class="pre">overlay_sparse_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sparse_array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Reds'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha_clip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(None,</span> <span class="pre">90)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.plot.overlay_sparse_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenient plotting method to overlay a sparse 2D array on an image.</p>
+<p>Should only be used with data arrays that are sparse: i.e., where many
+elements take the value 0 (or very near 0).</p>
+<p>Original implementation was borrowed from the <cite>dorado</cite> project’s
+implementation of <cite>show_nourishment_area</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sparse_array</strong> – 2d array to plot.</p></li>
+<li><p><strong>ax</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code> object, optional) – A <cite>matplotlib</cite> <cite>Axes</cite> object to plot the section. Optional; if not
+provided, a call is made to <code class="docutils literal notranslate"><span class="pre">plt.gca()</span></code> to get the current (or
+create a new) <cite>Axes</cite> object.</p></li>
+<li><p><strong>cmap</strong> – Maplotlib colormap to use. String or colormap object.</p></li>
+<li><p><strong>alpha_clip</strong> – Two element tuple, specifying the <em>percentiles</em> of the data in
+<cite>sparse_array</cite> to clip for display. First element specifies the lower
+bound to clip, second element is the upper bound. Either or both
+elements can be <cite>None</cite> to indicate no clipping. Default is <code class="docutils literal notranslate"><span class="pre">(None,</span>
+<span class="pre">90)</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>image object returned from <cite>imshow</cite>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>image</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>Here, we use the normalized discharge field from the model as an example
+of sparse data.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">golfcube</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">sample_data</span><span class="o">.</span><span class="n">golf</span><span class="p">()</span>
+<span class="n">elevation_data</span> <span class="o">=</span> <span class="n">golfcube</span><span class="p">[</span><span class="s1">&#39;eta&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span>
+<span class="n">sparse_data</span> <span class="o">=</span> <span class="p">(</span><span class="n">golfcube</span><span class="p">[</span><span class="s1">&#39;discharge&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">/</span>
+              <span class="p">(</span><span class="n">golfcube</span><span class="o">.</span><span class="n">meta</span><span class="p">[</span><span class="s1">&#39;h0&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">data</span> <span class="o">*</span>
+               <span class="n">golfcube</span><span class="o">.</span><span class="n">meta</span><span class="p">[</span><span class="s1">&#39;u0&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">))</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">axi</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">ravel</span><span class="p">():</span>
+    <span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">aerial_view</span><span class="p">(</span><span class="n">elevation_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axi</span><span class="p">)</span>
+
+<span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">overlay_sparse_array</span><span class="p">(</span>
+    <span class="n">sparse_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># default clip is (None, 90)</span>
+<span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">overlay_sparse_array</span><span class="p">(</span>
+    <span class="n">sparse_data</span><span class="p">,</span> <span class="n">alpha_clip</span><span class="o">=</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">overlay_sparse_array</span><span class="p">(</span>
+    <span class="n">sparse_data</span><span class="p">,</span> <span class="n">alpha_clip</span><span class="o">=</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="mi">90</span><span class="p">),</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="../../reference/plot/index-2.png">png</a>, <a class="reference external" href="../../reference/plot/index-2.hires.png">hires.png</a>)</p>
+<figure class="align-default">
+<img alt="../../_images/index-21.png" class="plot-directive" src="../../_images/index-21.png" />
+</figure>
+</dd></dl>
+
+</section>
+<section id="deltametrics-plot-routines">
+<h2>DeltaMetrics plot routines<a class="headerlink" href="#deltametrics-plot-routines" title="Permalink to this headline">¶</a></h2>
+<p>These functions are similar to the convenience functions above, but mostly produce their own plots entirely, rather than adding a component of a plot.</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plot.show_one_dimensional_trajectory_to_strata.html#deltametrics.plot.show_one_dimensional_trajectory_to_strata" title="deltametrics.plot.show_one_dimensional_trajectory_to_strata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_one_dimensional_trajectory_to_strata</span></code></a>(e)</p></td>
+<td><p>1d elevation to stratigraphy.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plot.show_histograms.html#deltametrics.plot.show_histograms" title="deltametrics.plot.show_histograms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_histograms</span></code></a>(*args[, sets, ax])</p></td>
+<td><p>Show multiple histograms, including as sets.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="deltametrics-colormaps">
+<h2>DeltaMetrics colormaps<a class="headerlink" href="#deltametrics-colormaps" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="deltametrics.plot.cartographic_colormap">
+<span class="sig-prename descclassname"><span class="pre">deltametrics.plot.</span></span><span class="sig-name descname"><span class="pre">cartographic_colormap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">H_SL</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.plot.cartographic_colormap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Colormap for an elevation map style.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>H_SL</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code>, optional) – Sea level for the colormap. This is the break-point
+between blues and greens. Default value is <cite>0.0</cite>.</p></li>
+<li><p><strong>h</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code>, optional) – Channel depth for the colormap. This is some characteristic <em>below
+sea-level</em> relief for the colormap to extend to through the range of
+blues. Default value is <cite>4.5</cite>.</p></li>
+<li><p><strong>n</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code>, optional) – Surface topography relief for the colormap. This is some
+characteristic <em>above sea-level</em> relief for the colormap to extend to
+through the range of greens. Default value is <cite>1.0</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>delta</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotib.colors.ListedColormap</span></code>) – The colormap object, which can then be used by other <cite>matplotlib</cite>
+plotting routines (see examples below).</p></li>
+<li><p><strong>norm</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotib.colors.BoundaryNorm</span></code>) – The color normalization object, which can then be used by other
+<cite>matplotlib</cite> plotting routines (see examples below).</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>To display with default depth and relief parameters (left) and with adjust
+parameters to highlight depth variability (right):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">golfcube</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">sample_data</span><span class="o">.</span><span class="n">golf</span><span class="p">()</span>
+
+<span class="n">cmap0</span><span class="p">,</span> <span class="n">norm0</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">cartographic_colormap</span><span class="p">(</span><span class="n">H_SL</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">cmap1</span><span class="p">,</span> <span class="n">norm1</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">cartographic_colormap</span><span class="p">(</span><span class="n">H_SL</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">im0</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">golfcube</span><span class="p">[</span><span class="s1">&#39;eta&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span>
+               <span class="n">cmap</span><span class="o">=</span><span class="n">cmap0</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm0</span><span class="p">)</span>
+<span class="n">cb0</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">append_colorbar</span><span class="p">(</span><span class="n">im0</span><span class="p">,</span> <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">im1</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">golfcube</span><span class="p">[</span><span class="s1">&#39;eta&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span>
+               <span class="n">cmap</span><span class="o">=</span><span class="n">cmap1</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm1</span><span class="p">)</span>
+<span class="n">cb1</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">append_colorbar</span><span class="p">(</span><span class="n">im1</span><span class="p">,</span> <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="../../reference/plot/index-3.png">png</a>, <a class="reference external" href="../../reference/plot/index-3.hires.png">hires.png</a>)</p>
+<figure class="align-default">
+<img alt="../../_images/index-3.png" class="plot-directive" src="../../_images/index-3.png" />
+</figure>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="deltametrics.plot.aerial_colormap">
+<span class="sig-prename descclassname"><span class="pre">deltametrics.plot.</span></span><span class="sig-name descname"><span class="pre">aerial_colormap</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.plot.aerial_colormap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Colormap for a pesudorealistic looking aerial shot.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Not implemented.</p>
+</div>
+</dd></dl>
+
+</section>
+<section id="plotting-utility-functions">
+<h2>Plotting utility functions<a class="headerlink" href="#plotting-utility-functions" title="Permalink to this headline">¶</a></h2>
+<p>These functions are mostly used internally.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="deltametrics.plot.append_colorbar">
+<span class="sig-prename descclassname"><span class="pre">deltametrics.plot.</span></span><span class="sig-name descname"><span class="pre">append_colorbar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ci</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labelsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.plot.append_colorbar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append a colorbar, consistently placed.</p>
+<p>Adjusts some parameters of the parent axes as well.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ci</strong> (<cite>matplotlib.pyplot.pcolormesh</cite>, <cite>matplotlib.pyplot.ImageAxes</cite>) – The colored object generated via matplotlib that the colormap should
+be stolen from.</p></li>
+<li><p><strong>ax</strong> (<cite>matplotlib.Axes</cite>) – The instance of axes to place the colorbar next to.</p></li>
+<li><p><strong>adjust</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code>) – Whether to adjust some minor attributes of the parent axis, for
+presentation.</p></li>
+<li><p><strong>**kwargs</strong> – Passed to <cite>matplotlib.pyplot.colorbar</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>cb</strong> – The colorbar instance created.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><cite>matplotlib.colorbar</cite> instance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="deltametrics.plot.get_display_arrays">
+<span class="sig-prename descclassname"><span class="pre">deltametrics.plot.</span></span><span class="sig-name descname"><span class="pre">get_display_arrays</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">VarInst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.plot.get_display_arrays" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get arrays for display of Variables.</p>
+<p>Function takes as argument a <cite>VariableInstance</cite> from a <cite>Section</cite> or
+<cite>Planform</cite> and an optional <code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code> argument, which specifies the data
+type to return, and gives back arrays of 1) data, 2) display x-coordinates
+and 3) display y-coordinates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>VarInst</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseSectionVariable</span></code> subclass) – The <cite>Variable</cite> instance to visualize. May be any subclass of
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseSectionVariable</span></code> or
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">BasePlanformVariable</span></code>.</p></li>
+<li><p><strong>data</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The type of data to visualize. Supported options are <cite>‘spacetime’</cite>,
+<cite>‘preserved’</cite>, and <cite>‘stratigraphy’</cite>. Default is to display full
+spacetime plot for variable generated from a <cite>DataCube</cite>, and
+stratigraphy for a <cite>StratigraphyCube</cite> variable. Note that variables
+sourced from a <cite>StratigraphyCube</cite> do not support the <cite>spacetime</cite> or
+<cite>preserved</cite> options, and a variable from <cite>DataCube</cite> will only support
+<cite>stratigraphy</cite> if the Cube has computed “quick” stratigraphy.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>data, X, Y</strong> – Three matching-size <cite>ndarray</cite> representing the 1) data, 2) display
+x-coordinates and 3) display y-coordinates.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="deltametrics.plot.get_display_lines">
+<span class="sig-prename descclassname"><span class="pre">deltametrics.plot.</span></span><span class="sig-name descname"><span class="pre">get_display_lines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">VarInst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.plot.get_display_lines" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get lines for display of Variables.</p>
+<p>Function takes as argument a <cite>VariableInstance</cite> from a <cite>Section</cite> or
+<cite>Planform</cite> and an optional <code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code> argument, which specifies the data
+type to return, and gives back data and line segments for display.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>VarInst</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseSectionVariable</span></code> subclass) – The <cite>Variable</cite> instance to visualize. May be any subclass of
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseSectionVariable</span></code> or
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">BasePlanformVariable</span></code>.</p></li>
+<li><p><strong>data</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The type of data to visualize. Supported options are <cite>‘spacetime’</cite>,
+<cite>‘preserved’</cite>, and <cite>‘stratigraphy’</cite>. Default is to display full
+spacetime plot for variable generated from a <cite>DataCube</cite>.  and
+stratigraphy for a <cite>StratigraphyCube</cite> variable. Variables from
+<cite>DataCube</cite> will only support <cite>stratigraphy</cite> if the Cube has computed
+“quick” stratigraphy.</p></li>
+<li><p><strong>note::</strong> (<em>..</em>) – Not currently implemented for variables from the <cite>StratigraphyCube</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>vals, segments</strong> – An off-by-one sized array of data values (<cite>vals</cite>) to color the line
+segments (<cite>segments</cite>). The segments are organized along the 0th
+dimension of the array.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="deltametrics.plot.get_display_limits">
+<span class="sig-prename descclassname"><span class="pre">deltametrics.plot.</span></span><span class="sig-name descname"><span class="pre">get_display_limits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">VarInst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.plot.get_display_limits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get limits to resize the display of Variables.</p>
+<p>Function takes as argument a <cite>VariableInstance</cite> from a <cite>Section</cite> or
+<cite>Planform</cite> and an optional <code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code> argument, which specifies how to
+determine the limits to return.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>VarInst</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseSectionVariable</span></code> subclass) – The <cite>Variable</cite> instance to visualize. May be any subclass of
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseSectionVariable</span></code> or
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">BasePlanformVariable</span></code>.</p></li>
+<li><p><strong>data</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The type of data to compute limits for. Typically this will be the
+same value used with either <a class="reference internal" href="#deltametrics.plot.get_display_arrays" title="deltametrics.plot.get_display_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_display_arrays</span></code></a> or
+<a class="reference internal" href="#deltametrics.plot.get_display_lines" title="deltametrics.plot.get_display_lines"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_display_lines</span></code></a>. Supported options are <cite>‘spacetime’</cite>,
+<cite>‘preserved’</cite>, and <cite>‘stratigraphy’</cite>.</p></li>
+<li><p><strong>factor</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code>, optional) – Factor to extend vertical limits upward for stratigraphic sections.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>xmin, xmax, ymin, ymax</strong> – Values to use as limits on a plot. Use with, for example,
+<code class="docutils literal notranslate"><span class="pre">ax.set_xlim((xmin,</span> <span class="pre">xmax))</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="deltametrics.plot._fill_steps">
+<span class="sig-prename descclassname"><span class="pre">deltametrics.plot.</span></span><span class="sig-name descname"><span class="pre">_fill_steps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">where</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.plot._fill_steps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fill rectangles where the boolean indicates <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<p>Creates an <code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code> by <code class="xref py py-obj docutils literal notranslate"><span class="pre">y</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib.patches.Rectangle</span></code> at
+each index where the index <cite>i</cite> in boolean <code class="xref py py-obj docutils literal notranslate"><span class="pre">where</span></code> indicates, with the
+lower left of the patch at (<cite>i</cite>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">y0</span></code>).</p>
+<p>This utility function is utilized internally. Most often, it is used to
+highlight where time has been preserved (or eliminated) in a timeseries of
+data. For example, see
+<a class="reference internal" href="../../_autosummary/deltametrics.plot.show_one_dimensional_trajectory_to_strata.html#deltametrics.plot.show_one_dimensional_trajectory_to_strata" title="deltametrics.plot.show_one_dimensional_trajectory_to_strata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_one_dimensional_trajectory_to_strata</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>where</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray</span></code>) – Boolean <cite>numpy</cite> <cite>ndarray</cite> indicating which locations to create a patch
+at.</p></li>
+<li><p><strong>x</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code>) – The x-direction width of the <cite>Rectangles</cite>.</p></li>
+<li><p><strong>y</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code>) – The y-direction height of the <cite>Rectangles</cite>.</p></li>
+<li><p><strong>y0</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code>) – The y-direction origin (i.e., lower-left y-value) of the <cite>Rectangles</cite>.</p></li>
+<li><p><strong>**kwargs</strong> – Additional <cite>matplotlib</cite> keyword arguments passed to the
+<cite>Rectangle</cite> instantiation. This is where you can set most
+<cite>matplotlib</cite> <cite>**kwargs</cite> (e.g., <cite>color</cite>, <cite>edgecolor</cite>).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>pc</strong> – Collection of <cite>Rectangle</cite> <cite>Patch</cite> objects.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib.patches.PatchCollection</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="deltametrics.plot._scale_lightness">
+<span class="sig-prename descclassname"><span class="pre">deltametrics.plot.</span></span><span class="sig-name descname"><span class="pre">_scale_lightness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rgb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_l</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.plot._scale_lightness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Utility to scale the lightness of some color.</p>
+<p>Make a color perceptually lighter or darker. Adapted from
+<a class="reference external" href="https://stackoverflow.com/a/60562502/4038393">https://stackoverflow.com/a/60562502/4038393</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rgb</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code>) – A three element tuple of the RGB values for the color.</p></li>
+<li><p><strong>scale_l</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code>) – The scale factor, relative to a value of <cite>1</cite>. A value of 1 performs no
+scaling, and values less than 1 darken the color, whereas values
+greater than 1 brighten the color.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>scaled</strong> – Scaled color RGB tuple.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p>(<a class="reference external" href="../../reference/plot/index-4.png">png</a>, <a class="reference external" href="../../reference/plot/index-4.hires.png">hires.png</a>)</p>
+<figure class="align-default">
+<img alt="../../_images/index-4.png" class="plot-directive" src="../../_images/index-4.png" />
+</figure>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Plotting utilities and functions</a><ul>
+<li><a class="reference internal" href="#default-styling">Default styling</a></li>
+<li><a class="reference internal" href="#plotting-utility-objects">Plotting utility objects</a></li>
+<li><a class="reference internal" href="#plotting-convenience-functions">Plotting convenience functions</a></li>
+<li><a class="reference internal" href="#deltametrics-plot-routines">DeltaMetrics plot routines</a></li>
+<li><a class="reference internal" href="#deltametrics-colormaps">DeltaMetrics colormaps</a></li>
+<li><a class="reference internal" href="#plotting-utility-functions">Plotting utility functions</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../../_autosummary/deltametrics.io.NetCDFIO.html"
+                          title="previous chapter">deltametrics.io.NetCDFIO</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../../_autosummary/deltametrics.plot.VariableInfo.html"
+                          title="next chapter">deltametrics.plot.VariableInfo</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/reference/plot/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../_autosummary/deltametrics.plot.VariableInfo.html" title="deltametrics.plot.VariableInfo"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../../_autosummary/deltametrics.io.NetCDFIO.html" title="deltametrics.io.NetCDFIO"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">DeltaMetrics 0.3.2 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >API reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Plotting utilities and functions</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, The DeltaRCM Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

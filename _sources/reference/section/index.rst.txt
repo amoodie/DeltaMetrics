@@ -1,0 +1,32 @@
+.. api.profile:
+
+*********************************
+Section operations and classes
+*********************************
+
+The package makes available models for vertical sections of deposits and strata.
+
+All classes inherit from :obj:`BaseSection`, and redefine methods and attributes for their own types.
+
+The classes are defined in ``deltametrics.section``. 
+
+Section types
+==============
+
+.. currentmodule:: deltametrics.section
+
+.. autosummary:: 
+    :toctree: ../../_autosummary
+    
+    PathSection
+    StrikeSection
+    DipSection
+    CircularSection
+    RadialSection
+    BaseSection
+
+
+Information about Sections
+==========================
+
+.. include:: lexicon.rst
