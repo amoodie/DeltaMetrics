@@ -1,12 +1,12 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>deltametrics.io.NetCDFIO &#8212; DeltaMetrics 0.3.2 documentation</title>
+    <title>deltametrics.io.NetCDFIO &#8212; DeltaMetrics 0.4.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -15,7 +15,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Plotting operations" href="../reference/plot/index.html" />
@@ -33,7 +35,7 @@
         <li class="right" >
           <a href="deltametrics.io.BaseIO.html" title="deltametrics.io.BaseIO"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">DeltaMetrics 0.3.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">DeltaMetrics 0.4.1 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../reference/index.html" >API reference</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../reference/io/index.html" accesskey="U">Input/output operations</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">deltametrics.io.NetCDFIO</a></li> 
@@ -46,7 +48,7 @@
           <div class="body" role="main">
             
   <section id="deltametrics-io-netcdfio">
-<h1>deltametrics.io.NetCDFIO<a class="headerlink" href="#deltametrics-io-netcdfio" title="Permalink to this headline">¶</a></h1>
+<h1>deltametrics.io.NetCDFIO<a class="headerlink" href="#deltametrics-io-netcdfio" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="deltametrics.io.NetCDFIO">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deltametrics.io.</span></span><span class="sig-name descname"><span class="pre">NetCDFIO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">io_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.io.NetCDFIO" title="Permalink to this definition">¶</a></dt>
@@ -68,7 +70,7 @@ information about the netCDF4 format, visit the netCDF4
 <dd><p>Initialize the NetCDFIO handler.</p>
 <p>Initialize a connection to a NetCDF file.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data_path</strong> (<cite>str</cite>) – Path to file to read or write to.</p></li>
 <li><p><strong>io_type</strong> (<cite>str</cite>) – Stores the type of output file loaded, either a netCDF4 file,
@@ -83,10 +85,6 @@ disabled, unless <code class="docutils literal notranslate"><span class="pre">wr
 
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#deltametrics.io.NetCDFIO.__init__" title="deltametrics.io.NetCDFIO.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(data_path, io_type[, write])</p></td>
 <td><p>Initialize the NetCDFIO handler.</p></td>
@@ -110,10 +108,6 @@ disabled, unless <code class="docutils literal notranslate"><span class="pre">wr
 </table>
 <p class="rubric">Attributes</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#deltametrics.io.NetCDFIO.data_path" title="deltametrics.io.NetCDFIO.data_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">data_path</span></code></a></p></td>
 <td><p>Path to data file.</p></td>
@@ -142,7 +136,7 @@ IO object, so it is not necessary to call it directly.</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data_path</span></span><a class="headerlink" href="#deltametrics.io.NetCDFIO.data_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path to data file.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>data_path</strong> (<em>str</em>) – path to data file for IO operations.</p>
 </dd>
 </dl>
@@ -150,7 +144,7 @@ IO object, so it is not necessary to call it directly.</p>
 <p>The setter method validates the path, and returns a
 <code class="docutils literal notranslate"><span class="pre">FileNotFoundError</span></code> if the file is not found.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><cite>str</cite></p>
 </dd>
 </dl>
@@ -183,7 +177,7 @@ IO object, so it is not necessary to call it directly.</p>
 <p>Converts <cite>variables</cite> in data file to <cite>xarray</cite> objects for coersion
 into a <code class="xref py py-obj docutils literal notranslate"><span class="pre">Cube</span></code> instance.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>var</strong> (<cite>str</cite>) – Which variable to load from the file.</p>
 </dd>
 </dl>
@@ -212,6 +206,26 @@ into a <code class="xref py py-obj docutils literal notranslate"><span class="pr
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">deltametrics.io.NetCDFIO</a><ul>
+<li><a class="reference internal" href="#deltametrics.io.NetCDFIO"><code class="docutils literal notranslate"><span class="pre">NetCDFIO</span></code></a><ul>
+<li><a class="reference internal" href="#deltametrics.io.NetCDFIO.__init__"><code class="docutils literal notranslate"><span class="pre">NetCDFIO.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#deltametrics.io.NetCDFIO.connect"><code class="docutils literal notranslate"><span class="pre">NetCDFIO.connect()</span></code></a></li>
+<li><a class="reference internal" href="#deltametrics.io.NetCDFIO.data_path"><code class="docutils literal notranslate"><span class="pre">NetCDFIO.data_path</span></code></a></li>
+<li><a class="reference internal" href="#deltametrics.io.NetCDFIO.get_known_coords"><code class="docutils literal notranslate"><span class="pre">NetCDFIO.get_known_coords()</span></code></a></li>
+<li><a class="reference internal" href="#deltametrics.io.NetCDFIO.get_known_variables"><code class="docutils literal notranslate"><span class="pre">NetCDFIO.get_known_variables()</span></code></a></li>
+<li><a class="reference internal" href="#deltametrics.io.NetCDFIO.keys"><code class="docutils literal notranslate"><span class="pre">NetCDFIO.keys</span></code></a></li>
+<li><a class="reference internal" href="#deltametrics.io.NetCDFIO.read"><code class="docutils literal notranslate"><span class="pre">NetCDFIO.read()</span></code></a></li>
+<li><a class="reference internal" href="#deltametrics.io.NetCDFIO.write"><code class="docutils literal notranslate"><span class="pre">NetCDFIO.write()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
     <h4>Previous topic</h4>
     <p class="topless"><a href="deltametrics.io.BaseIO.html"
                           title="previous chapter">deltametrics.io.BaseIO</a></p>
@@ -237,7 +251,7 @@ into a <code class="xref py py-obj docutils literal notranslate"><span class="pr
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -254,7 +268,7 @@ into a <code class="xref py py-obj docutils literal notranslate"><span class="pr
         <li class="right" >
           <a href="deltametrics.io.BaseIO.html" title="deltametrics.io.BaseIO"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">DeltaMetrics 0.3.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">DeltaMetrics 0.4.1 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../reference/index.html" >API reference</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../reference/io/index.html" >Input/output operations</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">deltametrics.io.NetCDFIO</a></li> 
@@ -262,7 +276,7 @@ into a <code class="xref py py-obj docutils literal notranslate"><span class="pr
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The DeltaRCM Team.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
   </body>
 </html>

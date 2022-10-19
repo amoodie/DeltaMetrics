@@ -1,12 +1,12 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>deltametrics.section.BaseSection &#8212; DeltaMetrics 0.3.2 documentation</title>
+    <title>deltametrics.section.BaseSection &#8212; DeltaMetrics 0.4.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -15,7 +15,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Stratigraphy operations" href="../reference/strat/index.html" />
@@ -33,7 +35,7 @@
         <li class="right" >
           <a href="deltametrics.section.RadialSection.html" title="deltametrics.section.RadialSection"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">DeltaMetrics 0.3.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">DeltaMetrics 0.4.1 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../reference/index.html" >API reference</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../reference/section/index.html" accesskey="U">Section operations</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">deltametrics.section.BaseSection</a></li> 
@@ -46,7 +48,7 @@
           <div class="body" role="main">
             
   <section id="deltametrics-section-basesection">
-<h1>deltametrics.section.BaseSection<a class="headerlink" href="#deltametrics-section-basesection" title="Permalink to this headline">¶</a></h1>
+<h1>deltametrics.section.BaseSection<a class="headerlink" href="#deltametrics-section-basesection" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="deltametrics.section.BaseSection">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">deltametrics.section.</span></span><span class="sig-name descname"><span class="pre">BaseSection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">section_type</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.section.BaseSection" title="Permalink to this definition">¶</a></dt>
@@ -59,7 +61,7 @@
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">section_type</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.section.BaseSection.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Identify coordinates defining the section.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>section_type</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>) – String identifying the <em>type</em> of <cite>Section</cite> being instantiated.</p></li>
 <li><p><strong>CubeInstance</strong> (<a class="reference internal" href="deltametrics.cube.BaseCube.html#deltametrics.cube.BaseCube" title="deltametrics.cube.BaseCube"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseCube</span></code></a> subclass, optional) – Connect to this cube. No connection is made if cube is not
@@ -80,10 +82,6 @@ any functionality (via the <a class="reference internal" href="#deltametrics.sec
 
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#deltametrics.section.BaseSection.__init__" title="deltametrics.section.BaseSection.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(section_type, *args[, name])</p></td>
 <td><p>Identify coordinates defining the section.</p></td>
@@ -101,10 +99,6 @@ any functionality (via the <a class="reference internal" href="#deltametrics.sec
 </table>
 <p class="rubric">Attributes</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#deltametrics.section.BaseSection.idx_trace" title="deltametrics.section.BaseSection.idx_trace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">idx_trace</span></code></a></p></td>
 <td><p>Alias for <cite>self.trace_idx</cite>.</p></td>
@@ -146,14 +140,14 @@ from data, for variable <code class="docutils literal notranslate"><span class="
 <p>We only support slicing by string.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>var</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>) – Which variable to slice.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>data</strong> – The undelrying data returned as an xarray <cite>DataArray</cite>, maintaining
 coordinates.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataArray</span></code></p>
 </dd>
 </dl>
@@ -205,7 +199,7 @@ edge node, and colors for the <cite>style=’shaded’</cite> mesh are determine
 from the lower-left-end edge node of the quad.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>SectionAttribute</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">SectionVariableInstance</span></code>) – Which attribute to show. Can be a string for a named <cite>Cube</cite>
 attribute, or any arbitrary data.</p></li>
@@ -236,7 +230,7 @@ create a new) <cite>Axes</cite> object.</p></li>
 </dl>
 <p class="rubric">Examples</p>
 <p><em>Example 1:</em> Display the <cite>velocity</cite> spacetime section of a DataCube.</p>
-<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">golfcube</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">sample_data</span><span class="o">.</span><span class="n">golf</span><span class="p">()</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">golfcube</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">sample_data</span><span class="o">.</span><span class="n">golf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">golfcube</span><span class="o">.</span><span class="n">register_section</span><span class="p">(</span>
 <span class="gp">... </span>    <span class="s1">&#39;demo&#39;</span><span class="p">,</span> <span class="n">dm</span><span class="o">.</span><span class="n">section</span><span class="o">.</span><span class="n">StrikeSection</span><span class="p">(</span><span class="n">distance_idx</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">golfcube</span><span class="o">.</span><span class="n">sections</span><span class="p">[</span><span class="s1">&#39;demo&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s1">&#39;velocity&#39;</span><span class="p">)</span>
@@ -250,7 +244,7 @@ create a new) <cite>Axes</cite> object.</p></li>
 <code class="docutils literal notranslate"><span class="pre">golfcube.show_section('demo',</span> <span class="pre">'velocity')</span></code>.</p>
 <p><em>Example 2:</em> Display a section, with “quick” stratigraphy, as the
 <cite>depth</cite> attribute, displaying several different section styles.</p>
-<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">golfcube</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">sample_data</span><span class="o">.</span><span class="n">golf</span><span class="p">()</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">golfcube</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">sample_data</span><span class="o">.</span><span class="n">golf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">golfcube</span><span class="o">.</span><span class="n">stratigraphy_from</span><span class="p">(</span><span class="s1">&#39;eta&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">golfcube</span><span class="o">.</span><span class="n">register_section</span><span class="p">(</span>
 <span class="gp">... </span>    <span class="s1">&#39;demo&#39;</span><span class="p">,</span> <span class="n">dm</span><span class="o">.</span><span class="n">section</span><span class="o">.</span><span class="n">StrikeSection</span><span class="p">(</span><span class="n">distance</span><span class="o">=</span><span class="mi">250</span><span class="p">))</span>
@@ -278,7 +272,7 @@ create a new) <cite>Axes</cite> object.</p></li>
 <dd><p>Plot section trace (x-y plane path).</p>
 <p>Plot the section trace (<a class="reference internal" href="#deltametrics.section.BaseSection.trace" title="deltametrics.section.BaseSection.trace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trace</span></code></a>) onto an x-y planview.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>*args</strong> – Passed to <cite>matplotlib</cite> <code class="xref py py-obj docutils literal notranslate"><span class="pre">plot()</span></code>.</p></li>
 <li><p><strong>ax</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code> object, optional) – A <cite>matplotlib</cite> <cite>Axes</cite> object to plot the trace. Optional; if not
@@ -298,7 +292,7 @@ Manipulates the <cite>matplotlib</cite> <cite>autoscale</cite> attribute. Defaul
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">strat_attr</span></span><a class="headerlink" href="#deltametrics.section.BaseSection.strat_attr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stratigraphic attributes data object.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="../reference/utils/index.html#deltametrics.utils.NoStratigraphyError" title="deltametrics.utils.NoStratigraphyError"><strong>NoStratigraphyError</strong></a> – If no stratigraphy information is found for the section.</p>
 </dd>
 </dl>
@@ -344,6 +338,32 @@ Manipulates the <cite>matplotlib</cite> <cite>autoscale</cite> attribute. Defaul
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">deltametrics.section.BaseSection</a><ul>
+<li><a class="reference internal" href="#deltametrics.section.BaseSection"><code class="docutils literal notranslate"><span class="pre">BaseSection</span></code></a><ul>
+<li><a class="reference internal" href="#deltametrics.section.BaseSection.__init__"><code class="docutils literal notranslate"><span class="pre">BaseSection.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#deltametrics.section.BaseSection.__getitem__"><code class="docutils literal notranslate"><span class="pre">BaseSection.__getitem__()</span></code></a></li>
+<li><a class="reference internal" href="#deltametrics.section.BaseSection.connect"><code class="docutils literal notranslate"><span class="pre">BaseSection.connect()</span></code></a></li>
+<li><a class="reference internal" href="#deltametrics.section.BaseSection.idx_trace"><code class="docutils literal notranslate"><span class="pre">BaseSection.idx_trace</span></code></a></li>
+<li><a class="reference internal" href="#deltametrics.section.BaseSection.name"><code class="docutils literal notranslate"><span class="pre">BaseSection.name</span></code></a></li>
+<li><a class="reference internal" href="#deltametrics.section.BaseSection.s"><code class="docutils literal notranslate"><span class="pre">BaseSection.s</span></code></a></li>
+<li><a class="reference internal" href="#deltametrics.section.BaseSection.shape"><code class="docutils literal notranslate"><span class="pre">BaseSection.shape</span></code></a></li>
+<li><a class="reference internal" href="#deltametrics.section.BaseSection.show"><code class="docutils literal notranslate"><span class="pre">BaseSection.show()</span></code></a></li>
+<li><a class="reference internal" href="#deltametrics.section.BaseSection.show_trace"><code class="docutils literal notranslate"><span class="pre">BaseSection.show_trace()</span></code></a></li>
+<li><a class="reference internal" href="#deltametrics.section.BaseSection.strat_attr"><code class="docutils literal notranslate"><span class="pre">BaseSection.strat_attr</span></code></a></li>
+<li><a class="reference internal" href="#deltametrics.section.BaseSection.trace"><code class="docutils literal notranslate"><span class="pre">BaseSection.trace</span></code></a></li>
+<li><a class="reference internal" href="#deltametrics.section.BaseSection.trace_idx"><code class="docutils literal notranslate"><span class="pre">BaseSection.trace_idx</span></code></a></li>
+<li><a class="reference internal" href="#deltametrics.section.BaseSection.variables"><code class="docutils literal notranslate"><span class="pre">BaseSection.variables</span></code></a></li>
+<li><a class="reference internal" href="#deltametrics.section.BaseSection.z"><code class="docutils literal notranslate"><span class="pre">BaseSection.z</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
     <h4>Previous topic</h4>
     <p class="topless"><a href="deltametrics.section.RadialSection.html"
                           title="previous chapter">deltametrics.section.RadialSection</a></p>
@@ -369,7 +389,7 @@ Manipulates the <cite>matplotlib</cite> <cite>autoscale</cite> attribute. Defaul
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -386,7 +406,7 @@ Manipulates the <cite>matplotlib</cite> <cite>autoscale</cite> attribute. Defaul
         <li class="right" >
           <a href="deltametrics.section.RadialSection.html" title="deltametrics.section.RadialSection"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">DeltaMetrics 0.3.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">DeltaMetrics 0.4.1 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../reference/index.html" >API reference</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../reference/section/index.html" >Section operations</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">deltametrics.section.BaseSection</a></li> 
@@ -394,7 +414,7 @@ Manipulates the <cite>matplotlib</cite> <cite>autoscale</cite> attribute. Defaul
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The DeltaRCM Team.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
   </body>
 </html>

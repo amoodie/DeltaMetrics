@@ -1,12 +1,12 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Comparing speed of stratigraphy access &#8212; DeltaMetrics 0.3.2 documentation</title>
+    <title>Comparing speed of stratigraphy access &#8212; DeltaMetrics 0.4.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
@@ -15,10 +15,12 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Subject Guides" href="../../subject_guides/index.html" />
+    <link rel="next" title="Accounting for subsidence when computing stratigraphy" href="accounting_for_subsidence.html" />
     <link rel="prev" title="Compute ordinariness of preserved strata" href="preserved_velocities.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -28,12 +30,12 @@
           <a href="../../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../../subject_guides/index.html" title="Subject Guides"
+          <a href="accounting_for_subsidence.html" title="Accounting for subsidence when computing stratigraphy"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="preserved_velocities.html" title="Compute ordinariness of preserved strata"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">DeltaMetrics 0.3.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">DeltaMetrics 0.4.1 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Examples</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Comparing speed of stratigraphy access</a></li> 
       </ul>
@@ -45,11 +47,11 @@
           <div class="body" role="main">
             
   <section id="comparing-speed-of-stratigraphy-access">
-<h1>Comparing speed of stratigraphy access<a class="headerlink" href="#comparing-speed-of-stratigraphy-access" title="Permalink to this headline">¶</a></h1>
+<h1>Comparing speed of stratigraphy access<a class="headerlink" href="#comparing-speed-of-stratigraphy-access" title="Permalink to this heading">¶</a></h1>
 <p>The access speed of a frozen volume is <strong>much</strong> faster than a live cube.
 This is because the live cube does not store any data in memory.
 Keeping data on disk is advantageous for large datasets, but slows down access considerably for computation.</p>
-<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">time</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">time</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># set up the cubes</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">golfcube</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">sample_data</span><span class="o">.</span><span class="n">golf</span><span class="p">()</span>
@@ -92,8 +94,8 @@ Keeping data on disk is advantageous for large datasets, but slows down access c
   </div>
   <div>
     <h4>Next topic</h4>
-    <p class="topless"><a href="../../subject_guides/index.html"
-                          title="next chapter">Subject Guides</a></p>
+    <p class="topless"><a href="accounting_for_subsidence.html"
+                          title="next chapter">Accounting for subsidence when computing stratigraphy</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
@@ -111,7 +113,7 @@ Keeping data on disk is advantageous for large datasets, but slows down access c
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -123,19 +125,19 @@ Keeping data on disk is advantageous for large datasets, but slows down access c
           <a href="../../../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="../../subject_guides/index.html" title="Subject Guides"
+          <a href="accounting_for_subsidence.html" title="Accounting for subsidence when computing stratigraphy"
              >next</a> |</li>
         <li class="right" >
           <a href="preserved_velocities.html" title="Compute ordinariness of preserved strata"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">DeltaMetrics 0.3.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">DeltaMetrics 0.4.1 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Examples</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Comparing speed of stratigraphy access</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The DeltaRCM Team.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
   </body>
 </html>
