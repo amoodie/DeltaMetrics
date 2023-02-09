@@ -6,16 +6,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Planview operations &#8212; DeltaMetrics 0.4.1 documentation</title>
+    <title>Planview operations &#8212; DeltaMetrics 0.4.2 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/sphinx_highlight.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -35,7 +32,7 @@
         <li class="right" >
           <a href="../../_autosummary/deltametrics.cube.BaseCube.html" title="deltametrics.cube.BaseCube"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">DeltaMetrics 0.4.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">DeltaMetrics 0.4.2 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">API reference</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Planview operations</a></li> 
       </ul>
@@ -80,31 +77,34 @@
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">¶</a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plan.compute_shoreline_roughness.html#deltametrics.plan.compute_shoreline_roughness" title="deltametrics.plan.compute_shoreline_roughness"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_shoreline_roughness</span></code></a>(shore_mask, ...)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plan.compute_land_area.html#deltametrics.plan.compute_land_area" title="deltametrics.plan.compute_land_area"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_land_area</span></code></a>(land_mask)</p></td>
+<td><p>Compute land (delta) area.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plan.compute_shoreline_roughness.html#deltametrics.plan.compute_shoreline_roughness" title="deltametrics.plan.compute_shoreline_roughness"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_shoreline_roughness</span></code></a>(shore_mask, ...)</p></td>
 <td><p>Compute shoreline roughness.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plan.compute_shoreline_length.html#deltametrics.plan.compute_shoreline_length" title="deltametrics.plan.compute_shoreline_length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_shoreline_length</span></code></a>(shore_mask[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plan.compute_shoreline_length.html#deltametrics.plan.compute_shoreline_length" title="deltametrics.plan.compute_shoreline_length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_shoreline_length</span></code></a>(shore_mask[, ...])</p></td>
 <td><p>Compute the length of a shoreline from a mask of the shoreline.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plan.compute_shoreline_distance.html#deltametrics.plan.compute_shoreline_distance" title="deltametrics.plan.compute_shoreline_distance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_shoreline_distance</span></code></a>(shore_mask[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plan.compute_shoreline_distance.html#deltametrics.plan.compute_shoreline_distance" title="deltametrics.plan.compute_shoreline_distance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_shoreline_distance</span></code></a>(shore_mask[, ...])</p></td>
 <td><p>Compute mean and stddev distance from the delta apex to the shoreline.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plan.compute_channel_width.html#deltametrics.plan.compute_channel_width" title="deltametrics.plan.compute_channel_width"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_channel_width</span></code></a>(channelmask[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plan.compute_channel_width.html#deltametrics.plan.compute_channel_width" title="deltametrics.plan.compute_channel_width"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_channel_width</span></code></a>(channelmask[, ...])</p></td>
 <td><p>Compute channel width from a mask and section.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plan.compute_channel_depth.html#deltametrics.plan.compute_channel_depth" title="deltametrics.plan.compute_channel_depth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_channel_depth</span></code></a>(channelmask, depth[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plan.compute_channel_depth.html#deltametrics.plan.compute_channel_depth" title="deltametrics.plan.compute_channel_depth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_channel_depth</span></code></a>(channelmask, depth[, ...])</p></td>
 <td><p>Compute channel depth from a mask and section.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plan.compute_surface_deposit_time.html#deltametrics.plan.compute_surface_deposit_time" title="deltametrics.plan.compute_surface_deposit_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_surface_deposit_time</span></code></a>(data[, surface_idx])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plan.compute_surface_deposit_time.html#deltametrics.plan.compute_surface_deposit_time" title="deltametrics.plan.compute_surface_deposit_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_surface_deposit_time</span></code></a>(data[, surface_idx])</p></td>
 <td><p>Compute the time of last deposition for a single time.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plan.compute_surface_deposit_age.html#deltametrics.plan.compute_surface_deposit_age" title="deltametrics.plan.compute_surface_deposit_age"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_surface_deposit_age</span></code></a>(data, ...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plan.compute_surface_deposit_age.html#deltametrics.plan.compute_surface_deposit_age" title="deltametrics.plan.compute_surface_deposit_age"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_surface_deposit_age</span></code></a>(data, ...)</p></td>
 <td><p>Compute the age (i.e., how much time ago) the surface was deposited.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plan.shaw_opening_angle_method.html#deltametrics.plan.shaw_opening_angle_method" title="deltametrics.plan.shaw_opening_angle_method"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shaw_opening_angle_method</span></code></a>(below_mask[, numviews])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plan.shaw_opening_angle_method.html#deltametrics.plan.shaw_opening_angle_method" title="deltametrics.plan.shaw_opening_angle_method"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shaw_opening_angle_method</span></code></a>(below_mask[, numviews])</p></td>
 <td><p>Extract the opening angle map from an image.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plan.morphological_closing_method.html#deltametrics.plan.morphological_closing_method" title="deltametrics.plan.morphological_closing_method"><code class="xref py py-obj docutils literal notranslate"><span class="pre">morphological_closing_method</span></code></a>(elevationmask)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plan.morphological_closing_method.html#deltametrics.plan.morphological_closing_method" title="deltametrics.plan.morphological_closing_method"><code class="xref py py-obj docutils literal notranslate"><span class="pre">morphological_closing_method</span></code></a>(elevationmask)</p></td>
 <td><p>Compute an average morphological map from an image,</p></td>
 </tr>
 </tbody>
@@ -175,14 +175,14 @@
         <li class="right" >
           <a href="../../_autosummary/deltametrics.cube.BaseCube.html" title="deltametrics.cube.BaseCube"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">DeltaMetrics 0.4.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">DeltaMetrics 0.4.2 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >API reference</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Planview operations</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The DeltaRCM Team.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
     </div>
   </body>
 </html>

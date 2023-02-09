@@ -12,6 +12,8 @@ Planforms
    :maxdepth: 1
 
    computations/radial_growth_pattern
+   computations/shoreline_roughness_perfect_direct
+   io/instantiate_mask_directly
 
 
 Sections
@@ -21,6 +23,7 @@ Sections
    :maxdepth: 1
 
    computations/aggradation_preserved_time
+   create_from/sections_into_arbitrary
 
 
 Plotting
@@ -42,6 +45,7 @@ Input and output
 
    io/connect_to_nonstandard_data
    io/setup_any_dataset
+   io/instantiate_mask_directly
 
 
 Stratigraphy
@@ -53,3 +57,4 @@ Stratigraphy
    computations/preserved_velocities
    computations/comparing_speeds_of_stratigraphy_access
    computations/accounting_for_subsidence
+   computations/computing_sedimentograph

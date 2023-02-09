@@ -6,22 +6,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Aggradation and preserved time &#8212; DeltaMetrics 0.4.1 documentation</title>
+    <title>Aggradation and preserved time &#8212; DeltaMetrics 0.4.2 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/sphinx_highlight.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="View a planform" href="../plot/show_plan.html" />
-    <link rel="prev" title="Radial growth of delta through time" href="radial_growth_pattern.html" /> 
+    <link rel="next" title="Creating Sections into different types of objects" href="../create_from/sections_into_arbitrary.html" />
+    <link rel="prev" title="How to create a LandMask from arbitrary data" href="../io/instantiate_mask_directly.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -30,12 +28,12 @@
           <a href="../../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../plot/show_plan.html" title="View a planform"
+          <a href="../create_from/sections_into_arbitrary.html" title="Creating Sections into different types of objects"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="radial_growth_pattern.html" title="Radial growth of delta through time"
+          <a href="../io/instantiate_mask_directly.html" title="How to create a LandMask from arbitrary data"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">DeltaMetrics 0.4.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">DeltaMetrics 0.4.2 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Examples</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Aggradation and preserved time</a></li> 
       </ul>
@@ -49,10 +47,10 @@
   <section id="aggradation-and-preserved-time">
 <h1>Aggradation and preserved time<a class="headerlink" href="#aggradation-and-preserved-time" title="Permalink to this heading">¶</a></h1>
 <p>Suppose we want to compute the effect of background aggradation on the preservation of time in a stratigraphic section.
-A simple way to do this would be to determine the fraction of model time intervals that are preserved in the stratigraphic section (<img class="math" src="_images/math/fb4e12c2fb7857917413f3da77734e83a6f6493e.png" alt="F_t"/>) as:</p>
-<div class="math">
-<p><img src="_images/math/123aefeac97595fa00e2c56475947b5fbfe5e479.png" alt="F_t = 1/T \sum_{t=0}^T I(t)"/></p>
-</div><p>where <img class="math" src="_images/math/907a4add6d5db5b7f197f7924f1371b8ac404fe6.png" alt="t"/> is a time interval in the total number of intervals <img class="math" src="_images/math/e8dea8254118f111b5fb20895b03528c17566f06.png" alt="T"/> from the model time series, and <img class="math" src="_images/math/015755a22b6219b345c36a9a47b091dc56007486.png" alt="I"/> is an indicator function taking a value of 1 if time interval <img class="math" src="_images/math/907a4add6d5db5b7f197f7924f1371b8ac404fe6.png" alt="t"/> is present in the section, and otherwise 0.</p>
+A simple way to do this would be to determine the fraction of model time intervals that are preserved in the stratigraphic section (<span class="math notranslate nohighlight">\(F_t\)</span>) as:</p>
+<div class="math notranslate nohighlight">
+\[F_t = 1/T \sum_{t=0}^T I(t)\]</div>
+<p>where <span class="math notranslate nohighlight">\(t\)</span> is a time interval in the total number of intervals <span class="math notranslate nohighlight">\(T\)</span> from the model time series, and <span class="math notranslate nohighlight">\(I\)</span> is an indicator function taking a value of 1 if time interval <span class="math notranslate nohighlight">\(t\)</span> is present in the section, and otherwise 0.</p>
 <p>We’ll use the <a class="reference internal" href="../../../reference/sample_data/index.html#deltametrics.sample_data.aeolian" title="deltametrics.sample_data.aeolian"><code class="xref py py-obj docutils literal notranslate"><span class="pre">aeolian</span></code></a> data set as an example here, and do stratigraphic calculation using the <a class="reference internal" href="../../../_autosummary/deltametrics.strat.compute_boxy_stratigraphy_volume.html#deltametrics.strat.compute_boxy_stratigraphy_volume" title="deltametrics.strat.compute_boxy_stratigraphy_volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_boxy_stratigraphy_volume</span></code></a> function.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">aeolian</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">sample_data</span><span class="o">.</span><span class="n">aeolian</span><span class="p">()</span>
 
@@ -134,13 +132,13 @@ A simple way to do this would be to determine the fraction of model time interva
         <div class="sphinxsidebarwrapper">
   <div>
     <h4>Previous topic</h4>
-    <p class="topless"><a href="radial_growth_pattern.html"
-                          title="previous chapter">Radial growth of delta through time</a></p>
+    <p class="topless"><a href="../io/instantiate_mask_directly.html"
+                          title="previous chapter">How to create a LandMask from arbitrary data</a></p>
   </div>
   <div>
     <h4>Next topic</h4>
-    <p class="topless"><a href="../plot/show_plan.html"
-                          title="next chapter">View a planform</a></p>
+    <p class="topless"><a href="../create_from/sections_into_arbitrary.html"
+                          title="next chapter">Creating Sections into different types of objects</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
@@ -170,19 +168,19 @@ A simple way to do this would be to determine the fraction of model time interva
           <a href="../../../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="../plot/show_plan.html" title="View a planform"
+          <a href="../create_from/sections_into_arbitrary.html" title="Creating Sections into different types of objects"
              >next</a> |</li>
         <li class="right" >
-          <a href="radial_growth_pattern.html" title="Radial growth of delta through time"
+          <a href="../io/instantiate_mask_directly.html" title="How to create a LandMask from arbitrary data"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">DeltaMetrics 0.4.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">DeltaMetrics 0.4.2 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Examples</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Aggradation and preserved time</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The DeltaRCM Team.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
     </div>
   </body>
 </html>

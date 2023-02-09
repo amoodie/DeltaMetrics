@@ -6,21 +6,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Radial growth of delta through time &#8212; DeltaMetrics 0.4.1 documentation</title>
+    <title>Radial growth of delta through time &#8212; DeltaMetrics 0.4.2 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/sphinx_highlight.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Aggradation and preserved time" href="aggradation_preserved_time.html" />
+    <link rel="next" title="Shoreline roughness of a perfect half-circle" href="shoreline_roughness_perfect_direct.html" />
     <link rel="prev" title="Examples" href="../index.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -30,12 +28,12 @@
           <a href="../../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="aggradation_preserved_time.html" title="Aggradation and preserved time"
+          <a href="shoreline_roughness_perfect_direct.html" title="Shoreline roughness of a perfect half-circle"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="../index.html" title="Examples"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">DeltaMetrics 0.4.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">DeltaMetrics 0.4.2 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Examples</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Radial growth of delta through time</a></li> 
       </ul>
@@ -50,9 +48,9 @@
 <h1>Radial growth of delta through time<a class="headerlink" href="#radial-growth-of-delta-through-time" title="Permalink to this heading">¶</a></h1>
 <p>The growth pattern of a delta can be predicted from the volume of a cylinder.
 The expectation is that a delta’s planform area grows according to a power law that is a function of basin depth, sediment input, and time.</p>
-<div class="math">
-<p><img src="_images/math/d314f3252c4b0fb2b21faacbdcf83e033400d9bb.png" alt="r = \sqrt{\frac{2 t Q_s}{h_b \pi}}"/></p>
-</div><div class="admonition note">
+<div class="math notranslate nohighlight">
+\[r = \sqrt{\frac{2 t Q_s}{h_b \pi}}\]</div>
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This formulation ignores deposit porosity (as is true for the sample data from <cite>pyDeltaRCM</cite> below).</p>
 </div>
@@ -81,7 +79,7 @@ The expectation is that a delta’s planform area grows according to a power law
 <p>Now plot</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># make a predictive model</span>
 <span class="k">def</span> <span class="nf">predict_for_t</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">Qs</span><span class="p">,</span> <span class="n">hb</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Predict the delta shoreline radius.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Predict the delta shoreline radius.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">t</span><span class="o">*</span><span class="n">Qs</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">hb</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
 
@@ -137,8 +135,8 @@ A likely possibility is that the shoreline location determined from the <a class
   </div>
   <div>
     <h4>Next topic</h4>
-    <p class="topless"><a href="aggradation_preserved_time.html"
-                          title="next chapter">Aggradation and preserved time</a></p>
+    <p class="topless"><a href="shoreline_roughness_perfect_direct.html"
+                          title="next chapter">Shoreline roughness of a perfect half-circle</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
@@ -168,19 +166,19 @@ A likely possibility is that the shoreline location determined from the <a class
           <a href="../../../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="aggradation_preserved_time.html" title="Aggradation and preserved time"
+          <a href="shoreline_roughness_perfect_direct.html" title="Shoreline roughness of a perfect half-circle"
              >next</a> |</li>
         <li class="right" >
           <a href="../index.html" title="Examples"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">DeltaMetrics 0.4.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">DeltaMetrics 0.4.2 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Examples</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Radial growth of delta through time</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The DeltaRCM Team.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
     </div>
   </body>
 </html>
