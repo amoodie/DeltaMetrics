@@ -1,20 +1,20 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>deltametrics.mobility.calculate_reworking_fraction &#8212; DeltaMetrics 0.4.2 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <title>deltametrics.mobility.calculate_reworking_fraction &#8212; DeltaMetrics 0.4.3 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=87629129" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/documentation_options.js?v=5bfaad31"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="deltametrics.mobility.calculate_channel_abandonment" href="deltametrics.mobility.calculate_channel_abandonment.html" />
@@ -32,7 +32,7 @@
         <li class="right" >
           <a href="deltametrics.mobility.calculate_planform_overlap.html" title="deltametrics.mobility.calculate_planform_overlap"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">DeltaMetrics 0.4.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">DeltaMetrics 0.4.3 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../reference/index.html" >API reference</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../reference/mobility/index.html" accesskey="U">Channel mobility operations</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">deltametrics.mobility.calculate_reworking_fraction</a></li> 
@@ -45,15 +45,39 @@
           <div class="body" role="main">
             
   <section id="deltametrics-mobility-calculate-reworking-fraction">
-<h1>deltametrics.mobility.calculate_reworking_fraction<a class="headerlink" href="#deltametrics-mobility-calculate-reworking-fraction" title="Permalink to this heading">¶</a></h1>
+<h1>deltametrics.mobility.calculate_reworking_fraction<a class="headerlink" href="#deltametrics-mobility-calculate-reworking-fraction" title="Link to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="deltametrics.mobility.calculate_reworking_fraction">
-<span class="sig-prename descclassname"><span class="pre">deltametrics.mobility.</span></span><span class="sig-name descname"><span class="pre">calculate_reworking_fraction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chmap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">landmap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">basevalues</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">basevalues_idx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_idx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.mobility.calculate_reworking_fraction" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">deltametrics.mobility.</span></span><span class="sig-name descname"><span class="pre">calculate_reworking_fraction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chmap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">landmap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">basevalues</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">basevalues_idx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_idx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.mobility.calculate_reworking_fraction" title="Link to this definition">¶</a></dt>
 <dd><p>Calculate the reworking fraction.</p>
-<p>Uses a method similar to that described in Wickert et al 2013 to measure
-the reworking of the fluvial surface with time. This requires an input
-channel map, land map, as well as defining the base maps to use and the
-time window over which you want to look.</p>
+<p>Uses a method similar to that described in Wickert et al 2013 <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> to
+measure the reworking of the fluvial surface with time. This requires an
+input channel map, land map, as well as defining the base maps to use and
+the time window over which you want to look.</p>
+<p>The reworking fraction is calculated as:</p>
+<div class="math notranslate nohighlight">
+\[f_{R} = 1 - \frac{N'_{B,T}}{A \cdot f_{d,B}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(f_{R}\)</span> is the reworking fraction, <span class="math notranslate nohighlight">\(N'_{B,T}\)</span> is the
+number of unreworked cells in the transient map, <span class="math notranslate nohighlight">\(A\)</span> is the area of
+fluvial surface, and <span class="math notranslate nohighlight">\(f_{d,B}\)</span> is the dry fraction of the base map.</p>
+<p><span class="math notranslate nohighlight">\(N'_{B,T}\)</span> is calculated as:</p>
+<div class="math notranslate nohighlight">
+\[N'_{B,T} = \sum_{i=1}^{m_r} \sum_{j=1}^{n_c} \left[ \left(\sum_{\beta = B+1}^{T} K'_{\beta} \right) \equiv 0 \right]\]</div>
+<p>where <span class="math notranslate nohighlight">\(m_r\)</span> and <span class="math notranslate nohighlight">\(n_c\)</span> are the number of rows and columns in the
+base map, <span class="math notranslate nohighlight">\(K'_{\beta}\)</span> is the channel mask at time <span class="math notranslate nohighlight">\(\beta\)</span> when
+<span class="math notranslate nohighlight">\(\beta\)</span> is used for each time step after the baseline time. This
+results in <span class="math notranslate nohighlight">\(N'_{B,T}\)</span> being the number of cells that are not
+reworked at some transient time <span class="math notranslate nohighlight">\(T\)</span> relative to the base time
+<span class="math notranslate nohighlight">\(B\)</span>.</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Wickert, Andrew D., John M. Martin, Michal Tal, Wonsuck Kim,
+Ben Sheets, and Chris Paola. “River channel lateral mobility:
+Metrics, time scales, and controls.” Journal of Geophysical
+Research: Earth Surface 118, no. 2 (2013): 396-412.</p>
+</aside>
+</aside>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -119,7 +143,7 @@ columns are associated with each time lag.</p>
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
@@ -127,7 +151,7 @@ columns are associated with each time lag.</p>
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
@@ -145,15 +169,15 @@ columns are associated with each time lag.</p>
         <li class="right" >
           <a href="deltametrics.mobility.calculate_planform_overlap.html" title="deltametrics.mobility.calculate_planform_overlap"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">DeltaMetrics 0.4.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">DeltaMetrics 0.4.3 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../reference/index.html" >API reference</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../reference/mobility/index.html" >Channel mobility operations</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">deltametrics.mobility.calculate_reworking_fraction</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, The DeltaRCM Team.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+    &#169; Copyright 2020, The DeltaRCM Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     </div>
   </body>
 </html>

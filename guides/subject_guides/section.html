@@ -1,20 +1,19 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Introduction to Section objects &#8212; DeltaMetrics 0.4.2 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <title>Introduction to Section objects &#8212; DeltaMetrics 0.4.3 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=87629129" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/documentation_options.js?v=5bfaad31"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -33,7 +32,7 @@
         <li class="right" >
           <a href="planform.html" title="Introduction to Planform objects"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">DeltaMetrics 0.4.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">DeltaMetrics 0.4.3 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Subject Guides</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Introduction to Section objects</a></li> 
       </ul>
@@ -45,7 +44,7 @@
           <div class="body" role="main">
             
   <section id="introduction-to-section-objects">
-<h1>Introduction to Section objects<a class="headerlink" href="#introduction-to-section-objects" title="Permalink to this heading">¶</a></h1>
+<h1>Introduction to Section objects<a class="headerlink" href="#introduction-to-section-objects" title="Link to this heading">¶</a></h1>
 <p class="rubric">Section lexicon</p>
 <p>The <cite>Section</cite> module defines some terms that are used throughout the code and rest of the documentation.</p>
 <p>Most importantly, a Section is defined by a set of coordinates in the <cite>dim1</cite>-<cite>dim2</cite> plane of a <cite>Cube</cite>.</p>
@@ -58,7 +57,7 @@
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rcm8cube</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">sample_data</span><span class="o">.</span><span class="n">golf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">strike</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">section</span><span class="o">.</span><span class="n">StrikeSection</span><span class="p">(</span><span class="n">rcm8cube</span><span class="p">,</span> <span class="n">distance_idx</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">strike</span><span class="p">[</span><span class="s1">&#39;velocity&#39;</span><span class="p">]</span>
-<span class="go">&lt;xarray.DataArray &#39;velocity&#39; (time: 101, s: 200)&gt;</span>
+<span class="go">&lt;xarray.DataArray &#39;velocity&#39; (time: 101, s: 200)&gt; Size: 81kB</span>
 <span class="go">array([[0.2   , 0.2   , 0.2   , ..., 0.2   , 0.2   , 0.2   ],</span>
 <span class="go">       [0.    , 0.    , 0.    , ..., 0.    , 0.    , 0.    ],</span>
 <span class="go">       [0.    , 0.0025, 0.    , ..., 0.    , 0.    , 0.    ],</span>
@@ -68,8 +67,8 @@
 <span class="go">       [0.    , 0.    , 0.    , ..., 0.0025, 0.    , 0.    ]],</span>
 <span class="go">      dtype=float32)</span>
 <span class="go">Coordinates:</span>
-<span class="go">  * s        (s) float64 0.0 50.0 100.0 150.0 ... 9.85e+03 9.9e+03 9.95e+03</span>
-<span class="go">  * time     (time) float32 0.0 5e+05 1e+06 1.5e+06 ... 4.9e+07 4.95e+07 5e+07</span>
+<span class="go">  * s        (s) float64 2kB 0.0 50.0 100.0 150.0 ... 9.85e+03 9.9e+03 9.95e+03</span>
+<span class="go">  * time     (time) float32 404B 0.0 5e+05 1e+06 ... 4.9e+07 4.95e+07 5e+07</span>
 <span class="go">Attributes:</span>
 <span class="go">    slicetype:           data_section</span>
 <span class="go">    knows_stratigraphy:  False</span>
@@ -80,7 +79,7 @@
 The same <cite>spacetime</cite> data can be requested in the “preserved” form, where non-preserved t-x-y points are masked with <code class="docutils literal notranslate"><span class="pre">np.nan</span></code>.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rcm8cube</span><span class="o">.</span><span class="n">stratigraphy_from</span><span class="p">(</span><span class="s1">&#39;eta&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">strike</span><span class="p">[</span><span class="s1">&#39;velocity&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">strat</span><span class="o">.</span><span class="n">as_preserved</span><span class="p">()</span>
-<span class="go">&lt;xarray.DataArray &#39;velocity&#39; (time: 101, s: 200)&gt;</span>
+<span class="go">&lt;xarray.DataArray &#39;velocity&#39; (time: 101, s: 200)&gt; Size: 81kB</span>
 <span class="go">array([[0.2, 0.2, 0.2, ..., 0.2, 0.2, 0.2],</span>
 <span class="go">       [nan, nan, nan, ..., nan, nan, nan],</span>
 <span class="go">       [nan, nan, nan, ..., nan, nan, nan],</span>
@@ -89,8 +88,8 @@ The same <cite>spacetime</cite> data can be requested in the “preserved” for
 <span class="go">       [nan, nan, nan, ..., nan, nan, nan],</span>
 <span class="go">       [nan, nan, nan, ..., nan, nan, nan]], dtype=float32)</span>
 <span class="go">Coordinates:</span>
-<span class="go">  * s        (s) float64 0.0 50.0 100.0 150.0 ... 9.85e+03 9.9e+03 9.95e+03</span>
-<span class="go">  * time     (time) float32 0.0 5e+05 1e+06 1.5e+06 ... 4.9e+07 4.95e+07 5e+07</span>
+<span class="go">  * s        (s) float64 2kB 0.0 50.0 100.0 150.0 ... 9.85e+03 9.9e+03 9.95e+03</span>
+<span class="go">  * time     (time) float32 404B 0.0 5e+05 1e+06 ... 4.9e+07 4.95e+07 5e+07</span>
 <span class="go">Attributes:</span>
 <span class="go">    slicetype:           data_section</span>
 <span class="go">    knows_stratigraphy:  True</span>
@@ -112,14 +111,14 @@ The same <cite>spacetime</cite> data can be requested in the “preserved” for
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;$s$ coordinate&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>(<a class="reference external" href="../../pyplots/section/section_lexicon.png">png</a>, <a class="reference external" href="../../pyplots/section/section_lexicon.hires.png">hires.png</a>)</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/6f78226732529db034204ed13e696e4c/section_lexicon.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/4312ca396b5e2f01374fa203c20fe2cc/section_lexicon.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>)</p>
 <figure class="align-default">
 <img alt="../../_images/section_lexicon.png" class="plot-directive" src="../../_images/section_lexicon.png" />
 </figure>
 <p>Note that in this visual all non-preserved spacetime points have been masked and are shown as white.
 See the <a class="reference external" href="https://numpy.org/doc/stable/reference/maskedarray.generic.html">numpy MaskedArray documentation</a> for more information on interacting with masked arrays.</p>
 <section id="creating-sections-into-other-data-types">
-<h2>Creating sections into other data types<a class="headerlink" href="#creating-sections-into-other-data-types" title="Permalink to this heading">¶</a></h2>
+<h2>Creating sections into other data types<a class="headerlink" href="#creating-sections-into-other-data-types" title="Link to this heading">¶</a></h2>
 <p>You can also create <cite>Sections</cite> into an object other than a <cite>Cube</cite>, such as a <cite>Mask</cite> or <cite>Planform</cite> or arbitrary data.</p>
 <p>See the <a class="reference internal" href="../examples/create_from/sections_into_arbitrary.html"><span class="doc">example here</span></a> for several examples.</p>
 </section>
@@ -159,7 +158,7 @@ See the <a class="reference external" href="https://numpy.org/doc/stable/referen
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
@@ -167,7 +166,7 @@ See the <a class="reference external" href="https://numpy.org/doc/stable/referen
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
@@ -185,14 +184,14 @@ See the <a class="reference external" href="https://numpy.org/doc/stable/referen
         <li class="right" >
           <a href="planform.html" title="Introduction to Planform objects"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">DeltaMetrics 0.4.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">DeltaMetrics 0.4.3 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >Subject Guides</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Introduction to Section objects</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, The DeltaRCM Team.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+    &#169; Copyright 2020, The DeltaRCM Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     </div>
   </body>
 </html>
