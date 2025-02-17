@@ -5,33 +5,33 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Plotting operations &#8212; DeltaMetrics 0.4.3 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=649a27d8" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=87629129" />
-    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
+    <title>Plotting operations &#8212; sandplover 0.5.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
-    <script src="../../_static/documentation_options.js?v=5bfaad31"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/documentation_options.js?v=1dd76d02"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="deltametrics.plot.VariableInfo" href="../../_autosummary/deltametrics.plot.VariableInfo.html" />
-    <link rel="prev" title="deltametrics.io.NetCDFIO" href="../../_autosummary/deltametrics.io.NetCDFIO.html" /> 
+    <link rel="next" title="sandplover.plot.VariableInfo" href="../../_autosummary/sandplover.plot.VariableInfo.html" />
+    <link rel="prev" title="sandplover.io.NetCDFIO" href="../../_autosummary/sandplover.io.NetCDFIO.html" /> 
   </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../../_autosummary/deltametrics.plot.VariableInfo.html" title="deltametrics.plot.VariableInfo"
+          <a href="../../_autosummary/sandplover.plot.VariableInfo.html" title="sandplover.plot.VariableInfo"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="../../_autosummary/deltametrics.io.NetCDFIO.html" title="deltametrics.io.NetCDFIO"
+          <a href="../../_autosummary/sandplover.io.NetCDFIO.html" title="sandplover.io.NetCDFIO"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">DeltaMetrics 0.4.3 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">sandplover 0.5.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">API reference</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Plotting operations</a></li> 
       </ul>
@@ -52,14 +52,14 @@ This reference page documents the lower-level utilities used to make this happen
 </div>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
-<p>There is a complete <a class="reference internal" href="../../guides/subject_guides/visualization.html"><span class="doc">Visualization Guide</span></a> about the organization of this area of DeltaMetrics and examples for how to use and make visualizations.</p>
+<p>There is a complete <a class="reference internal" href="../../guides/subject_guides/visualization.html"><span class="doc">Visualization Guide</span></a> about the organization of this area of sandplover and examples for how to use and make visualizations.</p>
 </div>
-<p>The functions are defined in <code class="docutils literal notranslate"><span class="pre">deltametrics.plot</span></code>.</p>
+<p>The functions are defined in <code class="docutils literal notranslate"><span class="pre">sandplover.plot</span></code>.</p>
 <section id="default-styling">
 <span id="id1"></span><h2>Default styling<a class="headerlink" href="#default-styling" title="Link to this heading">¶</a></h2>
 <p>By default, each variable receives a set of styling definitions.
 The default parameters of each styling variable are defined below:</p>
-<p>(<a class="reference download internal" download="" href="../../_downloads/9dfa6a7d76de82511b0f1bbede822734/document_variableset.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/ea187f822bb498c97dbe9ca002978b71/document_variableset.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>)</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/0f305c42b50b0e427bb8dd7a6b302590/document_variableset.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/5e9bbe8bbd5284d8a5c551cdf11ad830/document_variableset.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/00e2735d780a586f12fb5c208aedbe2b/document_variableset.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>)</p>
 <figure class="align-default">
 <img alt="../../_images/document_variableset.png" class="plot-directive" src="../../_images/document_variableset.png" />
 </figure>
@@ -70,10 +70,10 @@ The default parameters of each styling variable are defined below:</p>
 You may want to examine these to change the style of plotting across the package.</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plot.VariableInfo.html#deltametrics.plot.VariableInfo" title="deltametrics.plot.VariableInfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VariableInfo</span></code></a>(name, **kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../_autosummary/sandplover.plot.VariableInfo.html#sandplover.plot.VariableInfo" title="sandplover.plot.VariableInfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VariableInfo</span></code></a>(name, **kwargs)</p></td>
 <td><p>Variable styling and information.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plot.VariableSet.html#deltametrics.plot.VariableSet" title="deltametrics.plot.VariableSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VariableSet</span></code></a>([override_dict])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../_autosummary/sandplover.plot.VariableSet.html#sandplover.plot.VariableSet" title="sandplover.plot.VariableSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VariableSet</span></code></a>([override_dict])</p></td>
 <td><p>A default set of properties for variables.</p></td>
 </tr>
 </tbody>
@@ -84,8 +84,8 @@ You may want to examine these to change the style of plotting across the package
 <p>These functions may be helpful in making figures and exploring during analyses.
 Mostly, these functions provide a component of a plot.</p>
 <dl class="py function">
-<dt class="sig sig-object py" id="deltametrics.plot.aerial_view">
-<span class="sig-prename descclassname"><span class="pre">deltametrics.plot.</span></span><span class="sig-name descname"><span class="pre">aerial_view</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elevation_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datum</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ticks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colorbar_kw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_im</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.plot.aerial_view" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="sandplover.plot.aerial_view">
+<span class="sig-prename descclassname"><span class="pre">sandplover.plot.</span></span><span class="sig-name descname"><span class="pre">aerial_view</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elevation_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datum</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ticks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colorbar_kw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_im</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sandplover.plot.aerial_view" title="Link to this definition">¶</a></dt>
 <dd><p>Show an aerial plot of an elevation dataset.</p>
 <p>See also: implementation wrapper for a cube.</p>
 <dl class="field-list simple">
@@ -97,9 +97,9 @@ Mostly, these functions provide a component of a plot.</p>
 provided, a call is made to <code class="docutils literal notranslate"><span class="pre">plt.gca()</span></code> to get the current (or
 create a new) <cite>Axes</cite> object.</p></li>
 <li><p><strong>ticks</strong> – Whether to show ticks. Default is false, no tick labels.</p></li>
-<li><p><strong>colorbar_kw</strong> – Dictionary of keyword args passed to <a class="reference internal" href="#deltametrics.plot.append_colorbar" title="deltametrics.plot.append_colorbar"><code class="xref py py-func docutils literal notranslate"><span class="pre">append_colorbar()</span></code></a>.</p></li>
+<li><p><strong>colorbar_kw</strong> – Dictionary of keyword args passed to <a class="reference internal" href="#sandplover.plot.append_colorbar" title="sandplover.plot.append_colorbar"><code class="xref py py-func docutils literal notranslate"><span class="pre">append_colorbar()</span></code></a>.</p></li>
 <li><p><strong>return_im</strong> (<em>bool</em><em>, </em><em>optional</em>) – Returns the <code class="docutils literal notranslate"><span class="pre">plt.imshow()</span></code> image object if True. Default is False.</p></li>
-<li><p><strong>**kwargs</strong> – Optionally, arguments accepted by <a class="reference internal" href="#deltametrics.plot.cartographic_colormap" title="deltametrics.plot.cartographic_colormap"><code class="xref py py-func docutils literal notranslate"><span class="pre">cartographic_colormap()</span></code></a>, or
+<li><p><strong>**kwargs</strong> – Optionally, arguments accepted by <a class="reference internal" href="#sandplover.plot.cartographic_colormap" title="sandplover.plot.cartographic_colormap"><code class="xref py py-func docutils literal notranslate"><span class="pre">cartographic_colormap()</span></code></a>, or
 <cite>imshow</cite>.</p></li>
 </ul>
 </dd>
@@ -112,23 +112,15 @@ create a new) <cite>Axes</cite> object.</p></li>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">golfcube</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">sample_data</span><span class="o">.</span><span class="n">golf</span><span class="p">()</span>
-<span class="n">elevation_data</span> <span class="o">=</span> <span class="n">golfcube</span><span class="p">[</span><span class="s1">&#39;eta&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">aerial_view</span><span class="p">(</span><span class="n">elevation_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>(<a class="reference download internal" download="" href="../../_downloads/cfb9a62c707941b0d918fb9c57231fc9/index-1.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/484edddd44064d823784f57763215f7b/index-1.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>)</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/969af3fd79882e734cfa5cad9fb842ed/index-1.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/e6bb403ea3847ea4b5a629bbfa69a849/index-1.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/05bbc97194db6d31759fc4cc7424d048/index-1.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>)</p>
 <figure class="align-default">
 <img alt="../../_images/index-1.png" class="plot-directive" src="../../_images/index-1.png" />
 </figure>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="deltametrics.plot.overlay_sparse_array">
-<span class="sig-prename descclassname"><span class="pre">deltametrics.plot.</span></span><span class="sig-name descname"><span class="pre">overlay_sparse_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sparse_array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Reds'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha_clip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(None,</span> <span class="pre">90)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clip_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'percentile'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.plot.overlay_sparse_array" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="sandplover.plot.overlay_sparse_array">
+<span class="sig-prename descclassname"><span class="pre">sandplover.plot.</span></span><span class="sig-name descname"><span class="pre">overlay_sparse_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sparse_array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Reds'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha_clip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(None,</span> <span class="pre">90)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clip_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'percentile'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sandplover.plot.overlay_sparse_array" title="Link to this definition">¶</a></dt>
 <dd><p>Convenient plotting method to overlay a sparse 2D array on an image.</p>
 <p>Should only be used with data arrays that are sparse: i.e., where many
 elements take the value 0 (or very near 0).</p>
@@ -165,56 +157,24 @@ directly based on the values in <cite>alpha_clip</cite>.</p></li>
 <p class="rubric">Examples</p>
 <p>Here, we use the discharge field from the model as an example
 of sparse data.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">golfcube</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">sample_data</span><span class="o">.</span><span class="n">golf</span><span class="p">()</span>
-<span class="n">elevation_data</span> <span class="o">=</span> <span class="n">golfcube</span><span class="p">[</span><span class="s1">&#39;eta&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span>
-<span class="n">sparse_data</span> <span class="o">=</span> <span class="n">golfcube</span><span class="p">[</span><span class="s1">&#39;discharge&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-<span class="k">for</span> <span class="n">axi</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">ravel</span><span class="p">():</span>
-    <span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">aerial_view</span><span class="p">(</span><span class="n">elevation_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axi</span><span class="p">)</span>
-
-<span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">overlay_sparse_array</span><span class="p">(</span>
-    <span class="n">sparse_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># default clip is (None, 90)</span>
-<span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">overlay_sparse_array</span><span class="p">(</span>
-    <span class="n">sparse_data</span><span class="p">,</span> <span class="n">alpha_clip</span><span class="o">=</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">overlay_sparse_array</span><span class="p">(</span>
-    <span class="n">sparse_data</span><span class="p">,</span> <span class="n">alpha_clip</span><span class="o">=</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="mi">90</span><span class="p">),</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>(<a class="reference download internal" download="" href="../../_downloads/0262295ba98de8d58f4fc14a30b11105/index-2.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/6668ec952f2bdda05332aa4dfd239d27/index-2.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>)</p>
-<figure class="align-default">
-<img alt="../../_images/index-2.png" class="plot-directive" src="../../_images/index-2.png" />
+<p>(<a class="reference download internal" download="" href="../../_downloads/9cec24c5c63d9af965432cadea46be91/index-2.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>)</p>
+<figure class="align-default" id="id8">
+<img alt="../../_images/index-2_00.png" class="plot-directive" src="../../_images/index-2_00.png" />
+<figcaption>
+<p><span class="caption-text">(<a class="reference download internal" download="" href="../../_downloads/fb08b66349003a15cbff6e6ee693bd01/index-2_00.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/704b31673c4a9e6468ee589bdd59166b/index-2_00.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>)</span><a class="headerlink" href="#id8" title="Link to this image">¶</a></p>
+</figcaption>
 </figure>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-<span class="k">for</span> <span class="n">axi</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">ravel</span><span class="p">():</span>
-    <span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">aerial_view</span><span class="p">(</span><span class="n">elevation_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axi</span><span class="p">)</span>
-
-<span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">overlay_sparse_array</span><span class="p">(</span>
-    <span class="n">sparse_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-    <span class="n">clip_type</span><span class="o">=</span><span class="s1">&#39;value&#39;</span><span class="p">)</span>  <span class="c1"># default clip is (None, 90)</span>
-<span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">overlay_sparse_array</span><span class="p">(</span>
-    <span class="n">sparse_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
-    <span class="n">alpha_clip</span><span class="o">=</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">),</span> <span class="n">clip_type</span><span class="o">=</span><span class="s1">&#39;value&#39;</span><span class="p">)</span>
-<span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">overlay_sparse_array</span><span class="p">(</span>
-    <span class="n">sparse_data</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
-    <span class="n">alpha_clip</span><span class="o">=</span><span class="p">(</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">),</span> <span class="n">clip_type</span><span class="o">=</span><span class="s1">&#39;value&#39;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>(<a class="reference download internal" download="" href="../../_downloads/6558fbcdfefc4139526cfaf3e175910f/index-3.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/b0d492865cd247ad02379ce00b9d759b/index-3.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>)</p>
-<figure class="align-default">
-<img alt="../../_images/index-3.png" class="plot-directive" src="../../_images/index-3.png" />
+<figure class="align-default" id="id9">
+<img alt="../../_images/index-2_01.png" class="plot-directive" src="../../_images/index-2_01.png" />
+<figcaption>
+<p><span class="caption-text">(<a class="reference download internal" download="" href="../../_downloads/fee2be9af0b5f0380ba98f536422f0b0/index-2_01.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/6f8fbaf360649bba996e9676e93703dc/index-2_01.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>)</span><a class="headerlink" href="#id9" title="Link to this image">¶</a></p>
+</figcaption>
 </figure>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="deltametrics.plot.style_axes_km">
-<span class="sig-prename descclassname"><span class="pre">deltametrics.plot.</span></span><span class="sig-name descname"><span class="pre">style_axes_km</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.plot.style_axes_km" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="sandplover.plot.style_axes_km">
+<span class="sig-prename descclassname"><span class="pre">sandplover.plot.</span></span><span class="sig-name descname"><span class="pre">style_axes_km</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sandplover.plot.style_axes_km" title="Link to this definition">¶</a></dt>
 <dd><p>Style axes with kilometers, when initially set as meters.</p>
 <p>This function can be used two ways. Passing an <cite>Axes</cite> object as the first
 argument and optionally a string specifying <cite>‘x’</cite>, <cite>‘y’</cite>, or <cite>‘xy’</cite>
@@ -232,32 +192,32 @@ pass <cite>x</cite> or <cite>y</cite> to only style one axis.</p></li>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">golf</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">sample_data</span><span class="o">.</span><span class="n">golf</span><span class="p">()</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span>
-    <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="n">gridspec_kw</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">hspace</span><span class="o">=</span><span class="mf">0.5</span><span class="p">))</span>
-<span class="n">golf</span><span class="o">.</span><span class="n">quick_show</span><span class="p">(</span><span class="s1">&#39;eta&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ticks</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="n">golf</span><span class="o">.</span><span class="n">quick_show</span><span class="p">(</span><span class="s1">&#39;eta&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">ticks</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">style_axes_km</span><span class="p">(</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-
-<span class="n">golf</span><span class="o">.</span><span class="n">quick_show</span><span class="p">(</span><span class="s1">&#39;eta&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">idx</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
-<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">style_axes_km</span><span class="p">)</span>
-<span class="c1"># OR use: dm.plot.style_axes_km(ax[2], &#39;x&#39;)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">sandplover.plot</span><span class="w"> </span><span class="kn">import</span> <span class="n">style_axes_km</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">sandplover.sample_data.sample_data</span><span class="w"> </span><span class="kn">import</span> <span class="n">golf</span>
 </pre></div>
 </div>
-<p>(<a class="reference download internal" download="" href="../../_downloads/50e5b82df3806005e74b33f426ae012e/index-4.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/86d55b5c130ad6a35872e259a87c1980/index-4.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>)</p>
-<figure class="align-default">
-<img alt="../../_images/index-4.png" class="plot-directive" src="../../_images/index-4.png" />
-</figure>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">golf</span> <span class="o">=</span> <span class="n">golf</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">gridspec_kw</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">hspace</span><span class="o">=</span><span class="mf">0.5</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">golf</span><span class="o">.</span><span class="n">quick_show</span><span class="p">(</span><span class="s2">&quot;eta&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ticks</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">golf</span><span class="o">.</span><span class="n">quick_show</span><span class="p">(</span><span class="s2">&quot;eta&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">ticks</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">style_axes_km</span><span class="p">(</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">golf</span><span class="o">.</span><span class="n">quick_show</span><span class="p">(</span><span class="s2">&quot;eta&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">idx</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">style_axes_km</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>OR use: style_axes_km(ax[2], ‘x’)</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="deltametrics.plot.append_colorbar">
-<span class="sig-prename descclassname"><span class="pre">deltametrics.plot.</span></span><span class="sig-name descname"><span class="pre">append_colorbar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ci</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labelsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.plot.append_colorbar" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="sandplover.plot.append_colorbar">
+<span class="sig-prename descclassname"><span class="pre">sandplover.plot.</span></span><span class="sig-name descname"><span class="pre">append_colorbar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ci</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labelsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sandplover.plot.append_colorbar" title="Link to this definition">¶</a></dt>
 <dd><p>Append a colorbar, consistently placed.</p>
 <p>Adjusts some parameters of the parent axes as well.</p>
 <dl class="field-list simple">
@@ -283,25 +243,25 @@ For example, <cite>spacing=”proportional”</cite>.</p></li>
 </dd></dl>
 
 </section>
-<section id="deltametrics-plot-routines">
-<h2>DeltaMetrics plot routines<a class="headerlink" href="#deltametrics-plot-routines" title="Link to this heading">¶</a></h2>
+<section id="sandplover-plot-routines">
+<h2>sandplover plot routines<a class="headerlink" href="#sandplover-plot-routines" title="Link to this heading">¶</a></h2>
 <p>These functions are similar to the convenience functions above, but mostly produce their own plots entirely, rather than adding a component of a plot.</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plot.show_one_dimensional_trajectory_to_strata.html#deltametrics.plot.show_one_dimensional_trajectory_to_strata" title="deltametrics.plot.show_one_dimensional_trajectory_to_strata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_one_dimensional_trajectory_to_strata</span></code></a>(e)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../_autosummary/sandplover.plot.show_one_dimensional_trajectory_to_strata.html#sandplover.plot.show_one_dimensional_trajectory_to_strata" title="sandplover.plot.show_one_dimensional_trajectory_to_strata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_one_dimensional_trajectory_to_strata</span></code></a>(e)</p></td>
 <td><p>1d elevation to stratigraphy.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../_autosummary/deltametrics.plot.show_histograms.html#deltametrics.plot.show_histograms" title="deltametrics.plot.show_histograms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_histograms</span></code></a>(*args[, sets, ax])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../_autosummary/sandplover.plot.show_histograms.html#sandplover.plot.show_histograms" title="sandplover.plot.show_histograms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_histograms</span></code></a>(*args[, sets, ax])</p></td>
 <td><p>Show multiple histograms, including as sets.</p></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="deltametrics-colormaps">
-<h2>DeltaMetrics colormaps<a class="headerlink" href="#deltametrics-colormaps" title="Link to this heading">¶</a></h2>
+<section id="sandplover-colormaps">
+<h2>sandplover colormaps<a class="headerlink" href="#sandplover-colormaps" title="Link to this heading">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="deltametrics.plot.cartographic_colormap">
-<span class="sig-prename descclassname"><span class="pre">deltametrics.plot.</span></span><span class="sig-name descname"><span class="pre">cartographic_colormap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">H_SL</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.plot.cartographic_colormap" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="sandplover.plot.cartographic_colormap">
+<span class="sig-prename descclassname"><span class="pre">sandplover.plot.</span></span><span class="sig-name descname"><span class="pre">cartographic_colormap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">H_SL</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sandplover.plot.cartographic_colormap" title="Link to this definition">¶</a></dt>
 <dd><p>Colormap for an elevation map style.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -329,31 +289,36 @@ plotting routines (see examples below).</p></li>
 <p class="rubric">Examples</p>
 <p>To display with default depth and relief parameters (left) and with adjust
 parameters to highlight depth variability (right):</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">golfcube</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">sample_data</span><span class="o">.</span><span class="n">golf</span><span class="p">()</span>
-
-<span class="n">cmap0</span><span class="p">,</span> <span class="n">norm0</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">cartographic_colormap</span><span class="p">(</span><span class="n">H_SL</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">cmap1</span><span class="p">,</span> <span class="n">norm1</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">cartographic_colormap</span><span class="p">(</span><span class="n">H_SL</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
-<span class="n">im0</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">golfcube</span><span class="p">[</span><span class="s1">&#39;eta&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span>
-               <span class="n">cmap</span><span class="o">=</span><span class="n">cmap0</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm0</span><span class="p">)</span>
-<span class="n">cb0</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">append_colorbar</span><span class="p">(</span><span class="n">im0</span><span class="p">,</span> <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">im1</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">golfcube</span><span class="p">[</span><span class="s1">&#39;eta&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span>
-               <span class="n">cmap</span><span class="o">=</span><span class="n">cmap1</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm1</span><span class="p">)</span>
-<span class="n">cb1</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">append_colorbar</span><span class="p">(</span><span class="n">im1</span><span class="p">,</span> <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">sandplover.plot</span><span class="w"> </span><span class="kn">import</span> <span class="n">cartographic_colormap</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">sandplover.plot</span><span class="w"> </span><span class="kn">import</span> <span class="n">append_colorbar</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">sandplover.sample_data.sample_data</span><span class="w"> </span><span class="kn">import</span> <span class="n">golf</span>
 </pre></div>
 </div>
-<p>(<a class="reference download internal" download="" href="../../_downloads/895bf500f438a7ddce5eb5d783d9657b/index-5.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/18f1ef098fe21294468fc2b75a00d1d0/index-5.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>)</p>
-<figure class="align-default">
-<img alt="../../_images/index-5.png" class="plot-directive" src="../../_images/index-5.png" />
-</figure>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">golfcube</span> <span class="o">=</span> <span class="n">golf</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cmap0</span><span class="p">,</span> <span class="n">norm0</span> <span class="o">=</span> <span class="n">cartographic_colormap</span><span class="p">(</span><span class="n">H_SL</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cmap1</span><span class="p">,</span> <span class="n">norm1</span> <span class="o">=</span> <span class="n">cartographic_colormap</span><span class="p">(</span><span class="n">H_SL</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">im0</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">golfcube</span><span class="p">[</span><span class="s2">&quot;eta&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="n">origin</span><span class="o">=</span><span class="s2">&quot;lower&quot;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap0</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm0</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cb0</span> <span class="o">=</span> <span class="n">append_colorbar</span><span class="p">(</span><span class="n">im0</span><span class="p">,</span> <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">im1</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">golfcube</span><span class="p">[</span><span class="s2">&quot;eta&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="n">origin</span><span class="o">=</span><span class="s2">&quot;lower&quot;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap1</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm1</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cb1</span> <span class="o">=</span> <span class="n">append_colorbar</span><span class="p">(</span><span class="n">im1</span><span class="p">,</span> <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="deltametrics.plot.aerial_colormap">
-<span class="sig-prename descclassname"><span class="pre">deltametrics.plot.</span></span><span class="sig-name descname"><span class="pre">aerial_colormap</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.plot.aerial_colormap" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="sandplover.plot.aerial_colormap">
+<span class="sig-prename descclassname"><span class="pre">sandplover.plot.</span></span><span class="sig-name descname"><span class="pre">aerial_colormap</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sandplover.plot.aerial_colormap" title="Link to this definition">¶</a></dt>
 <dd><p>Colormap for a pesudorealistic looking aerial shot.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -362,8 +327,8 @@ parameters to highlight depth variability (right):</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="deltametrics.plot.vintage_colormap">
-<span class="sig-prename descclassname"><span class="pre">deltametrics.plot.</span></span><span class="sig-name descname"><span class="pre">vintage_colormap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">H_SL</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.plot.vintage_colormap" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="sandplover.plot.vintage_colormap">
+<span class="sig-prename descclassname"><span class="pre">sandplover.plot.</span></span><span class="sig-name descname"><span class="pre">vintage_colormap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">H_SL</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sandplover.plot.vintage_colormap" title="Link to this definition">¶</a></dt>
 <dd><p>Colormap in a vintage map style.</p>
 <p>This colormap uses a set of colors originally used by 1950s maps of the
 Wadden Sea <a class="footnote-reference brackets" href="#id5" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. The colormap is adapted from Stuart Pearson’s matlab version
@@ -391,34 +356,54 @@ Inlet, the Netherlands.” Marine Geology 415 (2019)
 <p class="rubric">Examples</p>
 <p>To display with default depth and relief parameters (left) and with adjust
 parameters to highlight depth variability (right):</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">golfcube</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">sample_data</span><span class="o">.</span><span class="n">golf</span><span class="p">()</span>
-
-<span class="n">cmap0</span><span class="p">,</span> <span class="n">norm0</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">vintage_colormap</span><span class="p">(</span><span class="n">H_SL</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">cmap1</span><span class="p">,</span> <span class="n">norm1</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">vintage_colormap</span><span class="p">(</span><span class="n">H_SL</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
-<span class="n">im0</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">golfcube</span><span class="p">[</span><span class="s1">&#39;eta&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span>
-               <span class="n">cmap</span><span class="o">=</span><span class="n">cmap0</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm0</span><span class="p">)</span>
-<span class="n">cb0</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">append_colorbar</span><span class="p">(</span><span class="n">im0</span><span class="p">,</span> <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">im1</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">golfcube</span><span class="p">[</span><span class="s1">&#39;eta&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span>
-               <span class="n">cmap</span><span class="o">=</span><span class="n">cmap1</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm1</span><span class="p">)</span>
-<span class="n">cb1</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">append_colorbar</span><span class="p">(</span><span class="n">im1</span><span class="p">,</span> <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">sandplover.plot</span><span class="w"> </span><span class="kn">import</span> <span class="n">append_colorbar</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">sandplover.plot</span><span class="w"> </span><span class="kn">import</span> <span class="n">vintage_colormap</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">sandplover.sample_data.sample_data</span><span class="w"> </span><span class="kn">import</span> <span class="n">golf</span>
 </pre></div>
 </div>
-<p>(<a class="reference download internal" download="" href="../../_downloads/f54413148ec6f59fa84d7d7292f3d3e7/index-6.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/a7a8269bdd2af68b0b5e7404bd6a080a/index-6.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>)</p>
-<figure class="align-default">
-<img alt="../../_images/index-6.png" class="plot-directive" src="../../_images/index-6.png" />
-</figure>
-<p>To use the colormap exactly as described in Pearson’s original publication, use parameters</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmap</span><span class="p">,</span> <span class="n">norm</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">vintage_colormap</span><span class="p">(</span><span class="n">H_SL</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">golfcube</span> <span class="o">=</span> <span class="n">golf</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>(<a class="reference download internal" download="" href="../../_downloads/99c28135e50b8e3c1a652d6e281ebcca/index-7.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/40040aa95c569c4d4c901b2388c9a365/index-7.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>)</p>
-<figure class="align-default">
-<img alt="../../_images/index-7.png" class="plot-directive" src="../../_images/index-7.png" />
-</figure>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cmap0</span><span class="p">,</span> <span class="n">norm0</span> <span class="o">=</span> <span class="n">vintage_colormap</span><span class="p">(</span><span class="n">H_SL</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cmap1</span><span class="p">,</span> <span class="n">norm1</span> <span class="o">=</span> <span class="n">vintage_colormap</span><span class="p">(</span><span class="n">H_SL</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">im0</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">golfcube</span><span class="p">[</span><span class="s2">&quot;eta&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="n">origin</span><span class="o">=</span><span class="s2">&quot;lower&quot;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap0</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm0</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cb0</span> <span class="o">=</span> <span class="n">append_colorbar</span><span class="p">(</span><span class="n">im0</span><span class="p">,</span> <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">im1</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">golfcube</span><span class="p">[</span><span class="s2">&quot;eta&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="n">origin</span><span class="o">=</span><span class="s2">&quot;lower&quot;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap1</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm1</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cb1</span> <span class="o">=</span> <span class="n">append_colorbar</span><span class="p">(</span><span class="n">im1</span><span class="p">,</span> <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>To use the colormap exactly as described in Pearson’s original publication,
+use parameters:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmap</span><span class="p">,</span> <span class="n">norm</span> <span class="o">=</span> <span class="n">vintage_colormap</span><span class="p">(</span><span class="n">H_SL</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cmapd</span><span class="p">,</span> <span class="n">normd</span> <span class="o">=</span> <span class="n">vintage_colormap</span><span class="p">(</span><span class="n">H_SL</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">gridspec_kw</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="mf">0.07</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="mf">0.85</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">imd</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmapd</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">normd</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cbd</span> <span class="o">=</span> <span class="n">append_colorbar</span><span class="p">(</span><span class="n">imd</span><span class="p">,</span> <span class="n">ax</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;elevation [m]&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </section>
@@ -426,8 +411,8 @@ parameters to highlight depth variability (right):</p>
 <h2>Plotting utility functions<a class="headerlink" href="#plotting-utility-functions" title="Link to this heading">¶</a></h2>
 <p>These functions are mostly used internally.</p>
 <dl class="py function">
-<dt class="sig sig-object py" id="deltametrics.plot.get_display_arrays">
-<span class="sig-prename descclassname"><span class="pre">deltametrics.plot.</span></span><span class="sig-name descname"><span class="pre">get_display_arrays</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">VarInst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.plot.get_display_arrays" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="sandplover.plot.get_display_arrays">
+<span class="sig-prename descclassname"><span class="pre">sandplover.plot.</span></span><span class="sig-name descname"><span class="pre">get_display_arrays</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">VarInst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sandplover.plot.get_display_arrays" title="Link to this definition">¶</a></dt>
 <dd><p>Get arrays for display of Variables.</p>
 <p>Function takes as argument a <cite>VariableInstance</cite> from a <cite>Section</cite> or
 <cite>Planform</cite> and an optional <code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code> argument, which specifies the data
@@ -459,8 +444,8 @@ x-coordinates and 3) display y-coordinates.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="deltametrics.plot.get_display_lines">
-<span class="sig-prename descclassname"><span class="pre">deltametrics.plot.</span></span><span class="sig-name descname"><span class="pre">get_display_lines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">VarInst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.plot.get_display_lines" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="sandplover.plot.get_display_lines">
+<span class="sig-prename descclassname"><span class="pre">sandplover.plot.</span></span><span class="sig-name descname"><span class="pre">get_display_lines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">VarInst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sandplover.plot.get_display_lines" title="Link to this definition">¶</a></dt>
 <dd><p>Get lines for display of Variables.</p>
 <p>Function takes as argument a <cite>VariableInstance</cite> from a <cite>Section</cite> or
 <cite>Planform</cite> and an optional <code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code> argument, which specifies the data
@@ -492,8 +477,8 @@ dimension of the array.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="deltametrics.plot.get_display_limits">
-<span class="sig-prename descclassname"><span class="pre">deltametrics.plot.</span></span><span class="sig-name descname"><span class="pre">get_display_limits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">VarInst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.plot.get_display_limits" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="sandplover.plot.get_display_limits">
+<span class="sig-prename descclassname"><span class="pre">sandplover.plot.</span></span><span class="sig-name descname"><span class="pre">get_display_limits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">VarInst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sandplover.plot.get_display_limits" title="Link to this definition">¶</a></dt>
 <dd><p>Get limits to resize the display of Variables.</p>
 <p>Function takes as argument a <cite>VariableInstance</cite> from a <cite>Section</cite> or
 <cite>Planform</cite> and an optional <code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code> argument, which specifies how to
@@ -505,8 +490,8 @@ determine the limits to return.</p>
 <code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseSectionVariable</span></code> or
 <code class="xref py py-obj docutils literal notranslate"><span class="pre">BasePlanformVariable</span></code>.</p></li>
 <li><p><strong>data</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The type of data to compute limits for. Typically this will be the
-same value used with either <a class="reference internal" href="#deltametrics.plot.get_display_arrays" title="deltametrics.plot.get_display_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_display_arrays</span></code></a> or
-<a class="reference internal" href="#deltametrics.plot.get_display_lines" title="deltametrics.plot.get_display_lines"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_display_lines</span></code></a>. Supported options are <cite>‘spacetime’</cite>,
+same value used with either <a class="reference internal" href="#sandplover.plot.get_display_arrays" title="sandplover.plot.get_display_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_display_arrays</span></code></a> or
+<a class="reference internal" href="#sandplover.plot.get_display_lines" title="sandplover.plot.get_display_lines"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_display_lines</span></code></a>. Supported options are <cite>‘spacetime’</cite>,
 <cite>‘preserved’</cite>, and <cite>‘stratigraphy’</cite>.</p></li>
 <li><p><strong>factor</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code>, optional) – Factor to extend vertical limits upward for stratigraphic sections.</p></li>
 </ul>
@@ -522,8 +507,8 @@ same value used with either <a class="reference internal" href="#deltametrics.pl
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="deltametrics.plot._fill_steps">
-<span class="sig-prename descclassname"><span class="pre">deltametrics.plot.</span></span><span class="sig-name descname"><span class="pre">_fill_steps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">where</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.plot._fill_steps" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="sandplover.plot._fill_steps">
+<span class="sig-prename descclassname"><span class="pre">sandplover.plot.</span></span><span class="sig-name descname"><span class="pre">_fill_steps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">where</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sandplover.plot._fill_steps" title="Link to this definition">¶</a></dt>
 <dd><p>Fill rectangles where the boolean indicates <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 <p>Creates an <code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code> by <code class="xref py py-obj docutils literal notranslate"><span class="pre">y</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib.patches.Rectangle</span></code> at
 each index where the index <cite>i</cite> in boolean <code class="xref py py-obj docutils literal notranslate"><span class="pre">where</span></code> indicates, with the
@@ -531,7 +516,7 @@ lower left of the patch at (<cite>i</cite>, <code class="xref py py-obj docutils
 <p>This utility function is utilized internally. Most often, it is used to
 highlight where time has been preserved (or eliminated) in a timeseries of
 data. For example, see
-<a class="reference internal" href="../../_autosummary/deltametrics.plot.show_one_dimensional_trajectory_to_strata.html#deltametrics.plot.show_one_dimensional_trajectory_to_strata" title="deltametrics.plot.show_one_dimensional_trajectory_to_strata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_one_dimensional_trajectory_to_strata</span></code></a>.</p>
+<a class="reference internal" href="../../_autosummary/sandplover.plot.show_one_dimensional_trajectory_to_strata.html#sandplover.plot.show_one_dimensional_trajectory_to_strata" title="sandplover.plot.show_one_dimensional_trajectory_to_strata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_one_dimensional_trajectory_to_strata</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -555,8 +540,8 @@ at.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="deltametrics.plot._scale_lightness">
-<span class="sig-prename descclassname"><span class="pre">deltametrics.plot.</span></span><span class="sig-name descname"><span class="pre">_scale_lightness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rgb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_l</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deltametrics.plot._scale_lightness" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="sandplover.plot._scale_lightness">
+<span class="sig-prename descclassname"><span class="pre">sandplover.plot.</span></span><span class="sig-name descname"><span class="pre">_scale_lightness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rgb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_l</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sandplover.plot._scale_lightness" title="Link to this definition">¶</a></dt>
 <dd><p>Utility to scale the lightness of some color.</p>
 <p>Make a color perceptually lighter or darker. Adapted from
 <a class="reference external" href="https://stackoverflow.com/a/60562502/4038393">https://stackoverflow.com/a/60562502/4038393</a>.</p>
@@ -577,9 +562,9 @@ greater than 1 brighten the color.</p></li>
 </dd>
 </dl>
 <p class="rubric">Example</p>
-<p>(<a class="reference download internal" download="" href="../../_downloads/e0fe84af00533c8cc168f8d32a846f5b/index-8.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/30fb687b67e0a140a6cbd19321407065/index-8.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>)</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/cbeda1f9615667711de1e5d1887f195e/index-3.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/370c76cea764469684306189ca9b3d13/index-3.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/2bf8ca785c4b239a7a145a24ddf13e1e/index-3.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>)</p>
 <figure class="align-default">
-<img alt="../../_images/index-8.png" class="plot-directive" src="../../_images/index-8.png" />
+<img alt="../../_images/index-3.png" class="plot-directive" src="../../_images/index-3.png" />
 </figure>
 </dd></dl>
 
@@ -591,7 +576,7 @@ greater than 1 brighten the color.</p></li>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="../../index.html">Table of Contents</a></h3>
@@ -600,25 +585,25 @@ greater than 1 brighten the color.</p></li>
 <li><a class="reference internal" href="#default-styling">Default styling</a></li>
 <li><a class="reference internal" href="#plotting-utility-objects">Plotting utility objects</a></li>
 <li><a class="reference internal" href="#plotting-convenience-functions">Plotting convenience functions</a><ul>
-<li><a class="reference internal" href="#deltametrics.plot.aerial_view"><code class="docutils literal notranslate"><span class="pre">aerial_view()</span></code></a></li>
-<li><a class="reference internal" href="#deltametrics.plot.overlay_sparse_array"><code class="docutils literal notranslate"><span class="pre">overlay_sparse_array()</span></code></a></li>
-<li><a class="reference internal" href="#deltametrics.plot.style_axes_km"><code class="docutils literal notranslate"><span class="pre">style_axes_km()</span></code></a></li>
-<li><a class="reference internal" href="#deltametrics.plot.append_colorbar"><code class="docutils literal notranslate"><span class="pre">append_colorbar()</span></code></a></li>
+<li><a class="reference internal" href="#sandplover.plot.aerial_view"><code class="docutils literal notranslate"><span class="pre">aerial_view()</span></code></a></li>
+<li><a class="reference internal" href="#sandplover.plot.overlay_sparse_array"><code class="docutils literal notranslate"><span class="pre">overlay_sparse_array()</span></code></a></li>
+<li><a class="reference internal" href="#sandplover.plot.style_axes_km"><code class="docutils literal notranslate"><span class="pre">style_axes_km()</span></code></a></li>
+<li><a class="reference internal" href="#sandplover.plot.append_colorbar"><code class="docutils literal notranslate"><span class="pre">append_colorbar()</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#deltametrics-plot-routines">DeltaMetrics plot routines</a></li>
-<li><a class="reference internal" href="#deltametrics-colormaps">DeltaMetrics colormaps</a><ul>
-<li><a class="reference internal" href="#deltametrics.plot.cartographic_colormap"><code class="docutils literal notranslate"><span class="pre">cartographic_colormap()</span></code></a></li>
-<li><a class="reference internal" href="#deltametrics.plot.aerial_colormap"><code class="docutils literal notranslate"><span class="pre">aerial_colormap()</span></code></a></li>
-<li><a class="reference internal" href="#deltametrics.plot.vintage_colormap"><code class="docutils literal notranslate"><span class="pre">vintage_colormap()</span></code></a></li>
+<li><a class="reference internal" href="#sandplover-plot-routines">sandplover plot routines</a></li>
+<li><a class="reference internal" href="#sandplover-colormaps">sandplover colormaps</a><ul>
+<li><a class="reference internal" href="#sandplover.plot.cartographic_colormap"><code class="docutils literal notranslate"><span class="pre">cartographic_colormap()</span></code></a></li>
+<li><a class="reference internal" href="#sandplover.plot.aerial_colormap"><code class="docutils literal notranslate"><span class="pre">aerial_colormap()</span></code></a></li>
+<li><a class="reference internal" href="#sandplover.plot.vintage_colormap"><code class="docutils literal notranslate"><span class="pre">vintage_colormap()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#plotting-utility-functions">Plotting utility functions</a><ul>
-<li><a class="reference internal" href="#deltametrics.plot.get_display_arrays"><code class="docutils literal notranslate"><span class="pre">get_display_arrays()</span></code></a></li>
-<li><a class="reference internal" href="#deltametrics.plot.get_display_lines"><code class="docutils literal notranslate"><span class="pre">get_display_lines()</span></code></a></li>
-<li><a class="reference internal" href="#deltametrics.plot.get_display_limits"><code class="docutils literal notranslate"><span class="pre">get_display_limits()</span></code></a></li>
-<li><a class="reference internal" href="#deltametrics.plot._fill_steps"><code class="docutils literal notranslate"><span class="pre">_fill_steps()</span></code></a></li>
-<li><a class="reference internal" href="#deltametrics.plot._scale_lightness"><code class="docutils literal notranslate"><span class="pre">_scale_lightness()</span></code></a></li>
+<li><a class="reference internal" href="#sandplover.plot.get_display_arrays"><code class="docutils literal notranslate"><span class="pre">get_display_arrays()</span></code></a></li>
+<li><a class="reference internal" href="#sandplover.plot.get_display_lines"><code class="docutils literal notranslate"><span class="pre">get_display_lines()</span></code></a></li>
+<li><a class="reference internal" href="#sandplover.plot.get_display_limits"><code class="docutils literal notranslate"><span class="pre">get_display_limits()</span></code></a></li>
+<li><a class="reference internal" href="#sandplover.plot._fill_steps"><code class="docutils literal notranslate"><span class="pre">_fill_steps()</span></code></a></li>
+<li><a class="reference internal" href="#sandplover.plot._scale_lightness"><code class="docutils literal notranslate"><span class="pre">_scale_lightness()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -628,13 +613,13 @@ greater than 1 brighten the color.</p></li>
   </div>
   <div>
     <h4>Previous topic</h4>
-    <p class="topless"><a href="../../_autosummary/deltametrics.io.NetCDFIO.html"
-                          title="previous chapter">deltametrics.io.NetCDFIO</a></p>
+    <p class="topless"><a href="../../_autosummary/sandplover.io.NetCDFIO.html"
+                          title="previous chapter">sandplover.io.NetCDFIO</a></p>
   </div>
   <div>
     <h4>Next topic</h4>
-    <p class="topless"><a href="../../_autosummary/deltametrics.plot.VariableInfo.html"
-                          title="next chapter">deltametrics.plot.VariableInfo</a></p>
+    <p class="topless"><a href="../../_autosummary/sandplover.plot.VariableInfo.html"
+                          title="next chapter">sandplover.plot.VariableInfo</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
@@ -657,26 +642,26 @@ greater than 1 brighten the color.</p></li>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="../../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="../../_autosummary/deltametrics.plot.VariableInfo.html" title="deltametrics.plot.VariableInfo"
+          <a href="../../_autosummary/sandplover.plot.VariableInfo.html" title="sandplover.plot.VariableInfo"
              >next</a> |</li>
         <li class="right" >
-          <a href="../../_autosummary/deltametrics.io.NetCDFIO.html" title="deltametrics.io.NetCDFIO"
+          <a href="../../_autosummary/sandplover.io.NetCDFIO.html" title="sandplover.io.NetCDFIO"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">DeltaMetrics 0.4.3 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">sandplover 0.5.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >API reference</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Plotting operations</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2020, The DeltaRCM Team.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    &#169; Copyright 2025, The sandpiper-toolchain Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     </div>
   </body>
 </html>

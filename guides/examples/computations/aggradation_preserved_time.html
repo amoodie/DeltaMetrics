@@ -5,14 +5,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Aggradation and preserved time &#8212; DeltaMetrics 0.4.3 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=649a27d8" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinxdoc.css?v=87629129" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=fd3f3429" />
+    <title>Aggradation and preserved time &#8212; sandplover 0.5.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
-    <script src="../../../_static/documentation_options.js?v=5bfaad31"></script>
-    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/documentation_options.js?v=1dd76d02"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -20,7 +20,7 @@
     <link rel="next" title="Creating Sections into different types of objects" href="../create_from/sections_into_arbitrary.html" />
     <link rel="prev" title="How to create a LandMask from arbitrary data" href="../io/instantiate_mask_directly.html" /> 
   </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -32,7 +32,7 @@
         <li class="right" >
           <a href="../io/instantiate_mask_directly.html" title="How to create a LandMask from arbitrary data"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">DeltaMetrics 0.4.3 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">sandplover 0.5.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Examples</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Aggradation and preserved time</a></li> 
       </ul>
@@ -50,8 +50,8 @@ A simple way to do this would be to determine the fraction of model time interva
 <div class="math notranslate nohighlight">
 \[F_t = 1/T \sum_{t=0}^T I(t)\]</div>
 <p>where <span class="math notranslate nohighlight">\(t\)</span> is a time interval in the total number of intervals <span class="math notranslate nohighlight">\(T\)</span> from the model time series, and <span class="math notranslate nohighlight">\(I\)</span> is an indicator function taking a value of 1 if time interval <span class="math notranslate nohighlight">\(t\)</span> is present in the section, and otherwise 0.</p>
-<p>We’ll use the <a class="reference internal" href="../../../reference/sample_data/index.html#deltametrics.sample_data.aeolian" title="deltametrics.sample_data.aeolian"><code class="xref py py-obj docutils literal notranslate"><span class="pre">aeolian</span></code></a> data set as an example here, and do stratigraphic calculation using the <a class="reference internal" href="../../../_autosummary/deltametrics.strat.compute_boxy_stratigraphy_volume.html#deltametrics.strat.compute_boxy_stratigraphy_volume" title="deltametrics.strat.compute_boxy_stratigraphy_volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_boxy_stratigraphy_volume</span></code></a> function.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">aeolian</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">sample_data</span><span class="o">.</span><span class="n">aeolian</span><span class="p">()</span>
+<p>We’ll use the <a class="reference internal" href="../../../reference/sample_data/index.html#sandplover.sample_data.aeolian" title="sandplover.sample_data.aeolian"><code class="xref py py-obj docutils literal notranslate"><span class="pre">aeolian</span></code></a> data set as an example here, and do stratigraphic calculation using the <a class="reference internal" href="../../../_autosummary/sandplover.strat.compute_boxy_stratigraphy_volume.html#sandplover.strat.compute_boxy_stratigraphy_volume" title="sandplover.strat.compute_boxy_stratigraphy_volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_boxy_stratigraphy_volume</span></code></a> function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">aeolian</span> <span class="o">=</span> <span class="n">spl</span><span class="o">.</span><span class="n">sample_data</span><span class="o">.</span><span class="n">aeolian</span><span class="p">()</span>
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2000</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
@@ -62,11 +62,11 @@ A simple way to do this would be to determine the fraction of model time interva
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>(<a class="reference download internal" download="" href="../../../_downloads/f48faf424dc47a3cc851ab2cea403178/aggradation_preserved_time-1.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/c7f13ebe3f3611b5d41ea4a6d28dd7ee/aggradation_preserved_time-1.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>)</p>
+<p>(<a class="reference download internal" download="" href="../../../_downloads/0eb119e24e419c27f0b94b4704e5ba21/aggradation_preserved_time-1.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/fdd375ef1879bf7255a47d39dcb03a25/aggradation_preserved_time-1.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/2ad0bdd91f38702a7165c33c6f19fbe5/aggradation_preserved_time-1.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>)</p>
 <figure class="align-default">
 <img alt="../../../_images/aggradation_preserved_time-1.png" class="plot-directive" src="../../../_images/aggradation_preserved_time-1.png" />
 </figure>
-<p>Using the <a class="reference internal" href="../../../_autosummary/deltametrics.strat.compute_boxy_stratigraphy_volume.html#deltametrics.strat.compute_boxy_stratigraphy_volume" title="deltametrics.strat.compute_boxy_stratigraphy_volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_boxy_stratigraphy_volume</span></code></a> function allows us to augment the bed elevation time series with a background aggradation.</p>
+<p>Using the <a class="reference internal" href="../../../_autosummary/sandplover.strat.compute_boxy_stratigraphy_volume.html#sandplover.strat.compute_boxy_stratigraphy_volume" title="sandplover.strat.compute_boxy_stratigraphy_volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_boxy_stratigraphy_volume</span></code></a> function allows us to augment the bed elevation time series with a background aggradation.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># define rates, in m/timestep</span>
 <span class="n">agg_rates</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">]</span>
 
@@ -81,7 +81,7 @@ A simple way to do this would be to determine the fraction of model time interva
         <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">aeolian</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">aeolian</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
 
     <span class="c1"># compute stratigraphy for elevation timeseries plus aggradation</span>
-    <span class="n">vol</span><span class="p">,</span> <span class="n">elev</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">strat</span><span class="o">.</span><span class="n">compute_boxy_stratigraphy_volume</span><span class="p">(</span>
+    <span class="n">vol</span><span class="p">,</span> <span class="n">elev</span> <span class="o">=</span> <span class="n">spl</span><span class="o">.</span><span class="n">strat</span><span class="o">.</span><span class="n">compute_boxy_stratigraphy_volume</span><span class="p">(</span>
         <span class="n">aeolian</span><span class="p">[</span><span class="s1">&#39;eta&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">agg_array</span><span class="p">,</span> <span class="n">aeolian</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span>
         <span class="n">dz</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
 
@@ -96,7 +96,7 @@ A simple way to do this would be to determine the fraction of model time interva
         <span class="n">vol</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">sec_idx</span><span class="p">],</span>
         <span class="n">extent</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">aeolian</span><span class="o">.</span><span class="n">dim1_coords</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">elev</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">elev</span><span class="o">.</span><span class="n">max</span><span class="p">()],</span>
         <span class="n">aspect</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">)</span>
-    <span class="n">cb</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">append_colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">cb</span> <span class="o">=</span> <span class="n">spl</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">append_colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
     <span class="n">cb</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">aeolian</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">][</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">units</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
 
     <span class="c1"># label</span>
@@ -116,7 +116,7 @@ A simple way to do this would be to determine the fraction of model time interva
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>(<a class="reference download internal" download="" href="../../../_downloads/6f67ccd41412b3fe96fa6875dab4200c/aggradation_preserved_time-2.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/4e09019fd28d45f9ad22a4e85c343555/aggradation_preserved_time-2.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>)</p>
+<p>(<a class="reference download internal" download="" href="../../../_downloads/6f901b74b65030ce084a2a258a2beb37/aggradation_preserved_time-2.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/42c4bb2c8aaf5bbad681d5cc7b6722e2/aggradation_preserved_time-2.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/f0cecb7d098d67191c5060c6edddc433/aggradation_preserved_time-2.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>)</p>
 <figure class="align-default">
 <img alt="../../../_images/aggradation_preserved_time-2.png" class="plot-directive" src="../../../_images/aggradation_preserved_time-2.png" />
 </figure>
@@ -127,7 +127,7 @@ A simple way to do this would be to determine the fraction of model time interva
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h4>Previous topic</h4>
@@ -160,7 +160,7 @@ A simple way to do this would be to determine the fraction of model time interva
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -172,14 +172,14 @@ A simple way to do this would be to determine the fraction of model time interva
         <li class="right" >
           <a href="../io/instantiate_mask_directly.html" title="How to create a LandMask from arbitrary data"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">DeltaMetrics 0.4.3 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">sandplover 0.5.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Examples</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Aggradation and preserved time</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2020, The DeltaRCM Team.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    &#169; Copyright 2025, The sandpiper-toolchain Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     </div>
   </body>
 </html>
