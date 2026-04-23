@@ -14,6 +14,8 @@ Planforms
    computations/radial_growth_pattern
    computations/shoreline_roughness_perfect_direct
    io/instantiate_mask_directly
+   computations/radially_averaged_topset_slope
+   computations/comparing_shoreline_roughness_metrics
 
 
 Sections
@@ -24,6 +26,14 @@ Sections
 
    computations/aggradation_preserved_time
    create_from/sections_into_arbitrary
+
+Masks
+-----
+
+.. toctree::
+   :maxdepth: 1
+
+   create_from/masks_from_planforms
 
 
 Plotting
@@ -54,6 +64,8 @@ Stratigraphy
 .. toctree::
    :maxdepth: 1
 
+   computations/compensational_stacking
+   computations/stratigraphy_temporal_subset
    computations/preserved_velocities
    computations/comparing_speeds_of_stratigraphy_access
    computations/accounting_for_subsidence
